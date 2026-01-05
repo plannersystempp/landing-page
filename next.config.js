@@ -16,6 +16,14 @@ const nextConfig = {
   env: {
     NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:8080',
   },
+  async rewrites() {
+    return [
+      {
+        source: '/v1',
+        destination: '/LandingpagePlannerSystemV1.html',
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;
