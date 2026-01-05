@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planner System - Gestão de Eventos Corporativos</title>
+    <meta name="description" content="O ecossistema digital definitivo para gestão de eventos corporativos. Centralize Staff, Custos e Financeiro.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Config for Custom Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#0F172A', // Slate 900
+                            primary: '#1E293B', // Slate 800
+                            accent: '#2563EB', // Blue 600 (Azul Vibrante)
+                            accentHover: '#1D4ED8', // Blue 700 (Azul Escuro para Hover)
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Icons (Lucide via UNPKG for lightweight load) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Custom styles for form inputs */
+        .form-input {
+            transition: all 0.3s ease;
+        }
+        .form-input:focus {
+            border-color: #2563EB;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+        }
+
+        /* Hero Image Shadow */
+        .hero-image-shadow {
+            box-shadow: 0 20px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-slate-800 bg-white">
+
+    <!-- 1. Hero Section (Dobra Principal) -->
+    <header class="relative bg-brand-dark pt-12 pb-20 lg:pt-20 lg:pb-32 overflow-hidden">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img 
+                src="https://www.circulandonews.com.br/wp-content/uploads/2023/10/Montagem-de-Palco-para-Show.jpg" 
+                alt="Background Evento" 
+                class="w-full h-full object-cover opacity-20"
+            >
+            <!-- Gradient Overlay to ensure text readability -->
+            <div class="absolute inset-0 bg-gradient-to-r from-brand-dark via-brand-dark/90 to-brand-dark/70"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- Logo -->
+            <div class="flex items-center justify-start mb-10">
+                <img src="https://raw.githubusercontent.com/samueleliasoliveira/varcomtecnologia/refs/heads/main/assets/img/plannerlogo_img1.png" alt="Planner System Logo" class="h-6 md:h-8 w-auto">
+            </div>
+
+            <!-- Adicionado 'flex flex-col-reverse' para inverter no mobile -->
+            <div class="flex flex-col-reverse lg:grid lg:grid-cols-12 lg:gap-8 items-center">
+                
+                <!-- Text Content (Left Side - 5 Columns) -->
+                <!-- No mobile, ficará embaixo devido ao 'flex-col-reverse' -->
+                <div class="lg:col-span-5 text-center lg:text-left mb-12 lg:mb-0 mt-8 lg:mt-0">
+                    <div class="inline-flex items-center px-3 py-1 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-sm font-semibold mb-6">
+                        <span class="w-2 h-2 rounded-full bg-brand-accent mr-2 animate-pulse"></span>
+                        Gestão Inteligente para Eventos
+                    </div>
+                    <h1 class="text-4xl md:text-5xl font-extrabold text-white leading-tight mb-6">
+                        Sua agência está pronta para escalar ou você ainda <span class="text-brand-accent">depende de planilhas?</span>
+                    </h1>
+                    <p class="text-lg text-slate-300 mb-8 leading-relaxed">
+                        O ecossistema digital definitivo para gestão de eventos corporativos. Centralize Staff, Custos e Financeiro em um único lugar e elimine os custos invisíveis da sua operação.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#contact" class="bg-brand-accent hover:bg-brand-accentHover text-white text-lg font-bold py-4 px-8 rounded-lg shadow-lg shadow-blue-500/30 transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2">
+                            QUERO AGENDAR UM TESTE PRÁTICO
+                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                    <p class="mt-4 text-slate-400 text-sm">
+                        * Não é necessário cartão de crédito para demonstração.
+                    </p>
+                </div>
+
+                <!-- Hero Image (Right Side - 7 Columns - Raw Image) -->
+                <!-- No mobile, ficará no topo devido ao 'flex-col-reverse' -->
+                <div class="lg:col-span-7 relative flex justify-center lg:justify-end w-full">
+                    <img 
+                        src="https://raw.githubusercontent.com/samueleliasoliveira/varcomtecnologia/refs/heads/main/assets/img/plannersystem_img1.png" 
+                        alt="Interface do Planner System" 
+                        class="w-full h-auto object-contain relative z-10"
+                    >
+                    <!-- Subtle ambient glow only -->
+                    <div class="absolute inset-0 bg-brand-accent/5 blur-3xl -z-10 rounded-full opacity-30 transform scale-75"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. Seção da Dor (O Problema) -->
+    <section class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-4">
+                    O crescimento traz o caos. <br><span class="text-brand-accent">Nós trazemos o controle.</span>
+                </h2>
+                <p class="text-lg text-slate-600">
+                    A maioria das agências quebra quando tenta escalar usando controles manuais. Você se identifica com isso?
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Pain Point 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow">
+                    <div class="bg-red-100 w-12 h-12 rounded-full flex items-center justify-center mb-6">
+                        <i data-lucide="x" class="text-red-600 w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-3">Planilhas Infinitas</h3>
+                    <p class="text-slate-600">
+                        Perda de tempo consolidando dados que nunca batem. O financeiro cobra uma coisa, a operação gastou outra.
+                    </p>
+                </div>
+
+                <!-- Pain Point 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow">
+                    <div class="bg-red-100 w-12 h-12 rounded-full flex items-center justify-center mb-6">
+                        <i data-lucide="banknote" class="text-red-600 w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-3">Custos Invisíveis</h3>
+                    <p class="text-slate-600">
+                        Horas extras e cachês mal calculados que comem até <span class="font-bold text-red-600">30% do seu lucro</span> sem você perceber.
+                    </p>
+                </div>
+
+                <!-- Pain Point 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow">
+                    <div class="bg-red-100 w-12 h-12 rounded-full flex items-center justify-center mb-6">
+                        <i data-lucide="users" class="text-red-600 w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-3">Staff no Escuro</h3>
+                    <p class="text-slate-600">
+                        Contratação sem histórico ou avaliação de performance. Você recontrata quem deu problema no último evento.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. A Solução (Funcionalidades) -->
+    <section class="py-20 bg-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <span class="text-brand-accent font-semibold tracking-wider uppercase text-sm">Ecossistema Completo</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mt-2">
+                    Tudo que você precisa em uma única plataforma
+                </h2>
+                <p class="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">
+                    Centralize a gestão de staff, custos e folha de pagamento. Substitua ferramentas manuais por processos inteligentes.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1: Gestão de Eventos -->
+                <div class="group bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:border-brand-accent/20 hover:shadow-lg transition-all duration-300">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-6 group-hover:bg-brand-accent group-hover:text-white transition-colors">
+                        <i data-lucide="calendar-days" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-3">Gestão de Eventos</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Crie e gerencie eventos com datas precisas, controle de status e organização completa para máxima eficiência operacional.
+                    </p>
+                </div>
+
+                <!-- Feature 2: Controle de Staff -->
+                <div class="group bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:border-brand-accent/20 hover:shadow-lg transition-all duration-300">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-6 group-hover:bg-brand-accent group-hover:text-white transition-colors">
+                        <i data-lucide="users-round" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-3">Controle de Staff</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Cadastre funcionários fixos e freelancers, defina funções específicas e gerencie alocações por departamento com facilidade.
+                    </p>
+                </div>
+
+                <!-- Feature 3: Lançamento de Horas -->
+                <div class="group bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:border-brand-accent/20 hover:shadow-lg transition-all duration-300">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-6 group-hover:bg-brand-accent group-hover:text-white transition-colors">
+                        <i data-lucide="clock" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-3">Lançamento de Horas</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Registre horas com regras claras: limiar diário gera 1 cachê não cumulativo automaticamente. Adeus cálculos manuais de HE.
+                    </p>
+                </div>
+
+                <!-- Feature 4: Folha de Pagamento -->
+                <div class="group bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:border-brand-accent/20 hover:shadow-lg transition-all duration-300">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-6 group-hover:bg-brand-accent group-hover:text-white transition-colors">
+                        <i data-lucide="wallet" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-3">Folha de Pagamento</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Calcule automaticamente pagamentos baseados em cachês diários e horas extras com precisão total e gere recibos.
+                    </p>
+                </div>
+
+                <!-- Feature 5: Estimativa de Custos -->
+                <div class="group bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:border-brand-accent/20 hover:shadow-lg transition-all duration-300">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-6 group-hover:bg-brand-accent group-hover:text-white transition-colors">
+                        <i data-lucide="bar-chart-3" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-3">Estimativa de Custos</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Visualize custos estimados por evento e acompanhe o orçamento em tempo real com dashboards intuitivos e visuais.
+                    </p>
+                </div>
+
+                <!-- Feature 6: Relatórios Inteligentes -->
+                <div class="group bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:border-brand-accent/20 hover:shadow-lg transition-all duration-300">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-6 group-hover:bg-brand-accent group-hover:text-white transition-colors">
+                        <i data-lucide="file-spreadsheet" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-3">Relatórios & Fornecedores</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Gerencie fornecedores com catálogo de preços e gere relatórios completos de pagamentos com filtros avançados.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Prova Social (Autoridade) -->
+    <section class="py-20 bg-brand-primary text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold mb-6">Resultados Comprovados na Prática</h2>
+                    <p class="text-slate-300 text-lg mb-8">
+                        Não é teoria, é campo de batalha. Veja o que aconteceu quando a <span class="text-brand-accent font-bold">LAF TECH</span> implementou o Planner System em sua gestão operacional.
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="bg-white/10 p-4 rounded-lg backdrop-blur">
+                            <span class="block text-2xl font-bold text-white">LAF TECH</span>
+                            <span class="text-sm text-slate-400">Agência Parceira</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-10 lg:mt-0">
+                    <!-- Metric 1 -->
+                    <div class="bg-white/5 border border-white/10 p-6 rounded-xl">
+                        <div class="text-4xl font-bold text-brand-accent mb-2">30%</div>
+                        <div class="text-sm text-slate-300 uppercase tracking-wide">Redução de Custos Operacionais</div>
+                    </div>
+                    <!-- Metric 2 -->
+                    <div class="bg-white/5 border border-white/10 p-6 rounded-xl">
+                        <div class="text-4xl font-bold text-brand-accent mb-2">60%</div>
+                        <div class="text-sm text-slate-300 uppercase tracking-wide">Aumento de Eficiência</div>
+                    </div>
+                    <!-- Metric 3 -->
+                    <div class="col-span-1 sm:col-span-2 bg-white/5 border border-white/10 p-6 rounded-xl flex items-center gap-4">
+                        <div class="bg-green-500/20 p-3 rounded-full">
+                            <i data-lucide="check" class="text-green-400 w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-white">98%</div>
+                            <div class="text-sm text-slate-300 uppercase tracking-wide">Melhoria na Gestão Operacional</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Call to Action Final (Rodapé/Formulário) -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-brand-dark rounded-3xl overflow-hidden shadow-2xl">
+                <div class="lg:grid lg:grid-cols-2">
+                    
+                    <!-- Left Side: Copy -->
+                    <div class="p-10 lg:p-12 flex flex-col justify-center relative overflow-hidden">
+                        <div class="absolute top-0 left-0 w-full h-full bg-blue-600/10 z-0"></div>
+                        <div class="relative z-10">
+                            <h2 class="text-3xl font-bold text-white mb-6">
+                                Vamos rodar um teste em um evento real?
+                            </h2>
+                            <p class="text-slate-300 mb-8">
+                                Pare de contratar no escuro. Veja a diferença na organização e no bolso imediatamente. Nossos especialistas vão te mostrar como configurar sua primeira operação.
+                            </p>
+                            <ul class="space-y-3 mb-8">
+                                <li class="flex items-center text-slate-300">
+                                    <i data-lucide="shield-check" class="w-5 h-5 text-brand-accent mr-3"></i>
+                                    Setup Guiado
+                                </li>
+                                <li class="flex items-center text-slate-300">
+                                    <i data-lucide="shield-check" class="w-5 h-5 text-brand-accent mr-3"></i>
+                                    Acesso ao Banco de Talentos
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Right Side: Form -->
+                    <div class="bg-white p-10 lg:p-12">
+                        <!-- ATENÇÃO: Configure a URL do Formspree abaixo no script, ou no 'action' caso prefira redirecionamento -->
+                        <form id="leadForm" class="space-y-4">
+                            <!-- Os campos precisam ter o atributo 'name' para serem capturados -->
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-slate-700 mb-1">Nome Completo</label>
+                                <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-accent focus:border-transparent form-input" placeholder="Seu nome">
+                            </div>
+                            
+                            <div>
+                                <label for="agency" class="block text-sm font-medium text-slate-700 mb-1">Nome da Agência</label>
+                                <input type="text" id="agency" name="agency" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-accent focus:border-transparent form-input" placeholder="Sua agência">
+                            </div>
+
+                            <div>
+                                <label for="whatsapp" class="block text-sm font-medium text-slate-700 mb-1">WhatsApp</label>
+                                <input type="tel" id="whatsapp" name="whatsapp" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-accent focus:border-transparent form-input" placeholder="(00) 00000-0000">
+                            </div>
+
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-slate-700 mb-1">E-mail Corporativo</label>
+                                <input type="email" id="email" name="_replyto" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-accent focus:border-transparent form-input" placeholder="seu@email.com">
+                            </div>
+
+                            <button type="submit" class="w-full bg-brand-accent hover:bg-brand-accentHover text-white font-bold py-4 rounded-lg shadow-lg transform transition hover:-translate-y-1 duration-200 mt-2">
+                                FALAR COM ESPECIALISTA
+                            </button>
+                        </form>
+                        
+                        <!-- Success Message (Hidden by default) -->
+                        <div id="successMessage" class="hidden text-center py-10">
+                            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i data-lucide="check" class="text-green-600 w-8 h-8"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-brand-dark">Solicitação Recebida!</h3>
+                            <p class="text-slate-600 mt-2">Nossa equipe entrará em contato em breve para agendar seu teste.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark border-t border-slate-800 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-2">
+                <img src="https://raw.githubusercontent.com/samueleliasoliveira/varcomtecnologia/refs/heads/main/assets/img/plannerlogo_img1.png" alt="Planner System Logo" class="h-6 w-auto">
+            </div>
+            <div class="text-slate-400 text-sm">
+                &copy; 2024 Planner System. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Widget Chat Flutuante -->
+    <div class="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-4">
+        
+        <!-- Janela do Chat (Inicialmente Oculta) -->
+        <div id="chatWindow" class="hidden bg-white w-80 rounded-2xl shadow-2xl overflow-hidden border border-slate-200 transform transition-all duration-300 origin-bottom-right mb-2">
+            <!-- Cabeçalho do Chat -->
+            <div class="bg-brand-accent p-4 flex items-center gap-3">
+                <div class="relative">
+                    <div class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-white">
+                        <i data-lucide="user" class="w-6 h-6"></i>
+                    </div>
+                    <div class="absolute bottom-0 right-0 w-3 h-3 bg-green-500 rounded-full border-2 border-brand-accent"></div>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white text-sm">Suporte Planner System</h4>
+                    <p class="text-blue-100 text-xs">Online agora</p>
+                </div>
+                <button onclick="toggleChat()" class="ml-auto text-white/80 hover:text-white">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+
+            <!-- Corpo do Chat -->
+            <div class="p-4 bg-slate-50 h-64 flex flex-col gap-4 overflow-y-auto">
+                <!-- Mensagem do Sistema -->
+                <div class="flex items-start gap-2">
+                    <div class="bg-white p-3 rounded-2xl rounded-tl-none shadow-sm border border-slate-100 max-w-[85%]">
+                        <p class="text-slate-600 text-sm">Olá! 👋 <br>Gostaria de agendar um teste prático e ver como o Planner System pode escalar sua agência?</p>
+                        <span class="text-[10px] text-slate-400 mt-1 block text-right">Agora</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rodapé com Ação -->
+            <div class="p-3 bg-white border-t border-slate-100">
+                <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20teste%20pr%C3%A1tico%20do%20Planner%20System." target="_blank" class="flex items-center justify-center gap-2 w-full bg-brand-accent hover:bg-brand-accentHover text-white font-bold py-3 rounded-xl transition-colors shadow-sm hover:shadow group">
+                    <i data-lucide="message-circle" class="w-5 h-5"></i>
+                    Sim, vamos lá!
+                </a>
+            </div>
+        </div>
+
+        <!-- Container para Botão e CTA Lateral -->
+        <div class="flex items-center gap-3">
+            <!-- CTA Mensagem (Ao lado do botão) -->
+            <div class="bg-white py-2 px-4 rounded-xl shadow-lg border border-slate-100 animate-bounce hidden md:block cursor-pointer" onclick="toggleChat()">
+                <p class="font-bold text-sm text-slate-700 whitespace-nowrap flex items-center gap-2">
+                    Falar com Especialista 👋
+                </p>
+            </div>
+
+            <!-- Botão Flutuante (Cor Azul) -->
+            <button onclick="toggleChat()" class="bg-brand-accent hover:bg-brand-accentHover text-white p-4 rounded-full shadow-lg shadow-blue-500/30 transition-transform hover:scale-110 flex items-center justify-center group relative">
+                <!-- Ping de notificação -->
+                <span class="absolute top-0 right-0 flex h-3 w-3">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
+                </span>
+                <i data-lucide="message-circle" class="w-7 h-7"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Chat Toggle Logic
+        function toggleChat() {
+            const chatWindow = document.getElementById('chatWindow');
+            if (chatWindow.classList.contains('hidden')) {
+                chatWindow.classList.remove('hidden');
+                // Pequena animação de entrada
+                chatWindow.classList.add('opacity-0', 'scale-95');
+                setTimeout(() => {
+                    chatWindow.classList.remove('opacity-0', 'scale-95');
+                }, 10);
+            } else {
+                chatWindow.classList.add('hidden');
+            }
+        }
+
+        // Abrir chat automaticamente após 5 segundos
+        setTimeout(() => {
+            const chatWindow = document.getElementById('chatWindow');
+            if(chatWindow.classList.contains('hidden')) {
+                toggleChat();
+            }
+        }, 5000);
+
+        // Handler do Formulário com Formspree (AJAX)
+        document.getElementById('leadForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const form = e.target;
+            const data = new FormData(form);
+            const btn = this.querySelector('button');
+            const originalText = btn.innerText;
+            
+            // Simula estado de carregamento
+            btn.innerText = 'ENVIANDO...';
+            btn.disabled = true;
+            btn.classList.add('opacity-75');
+
+            // URL do Formspree configurada com o seu ID
+            const formspreeUrl = "https://formspree.io/f/xdakbqoj"; 
+
+            fetch(formspreeUrl, {
+                method: "POST",
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    // Sucesso!
+                    this.style.display = 'none';
+                    document.getElementById('successMessage').classList.remove('hidden');
+                    console.log('Formulário enviado via Formspree!');
+                } else {
+                    response.json().then(data => {
+                        if (Object.hasOwn(data, 'errors')) {
+                            alert(data["errors"].map(error => error["message"]).join(", "));
+                        } else {
+                            alert("Ops! Ocorreu um problema ao enviar seu formulário.");
+                        }
+                    });
+                    throw new Error('Erro no envio');
+                }
+            }).catch(error => {
+                // Erro de rede ou outro
+                btn.innerText = originalText;
+                btn.disabled = false;
+                btn.classList.remove('opacity-75');
+                console.error('Erro:', error);
+                // O alert só aparece se realmente falhar a requisição
+                alert("Erro ao enviar. Verifique sua conexão e tente novamente.");
+            });
+        });
+    </script>
+</body>
+</html>
