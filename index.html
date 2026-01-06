@@ -29,6 +29,9 @@
                             accent: '#2563EB', // Blue 600 (Azul Vibrante)
                             accentHover: '#1D4ED8', // Blue 700 (Azul Escuro para Hover)
                         }
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
                     }
                 }
             }
@@ -70,7 +73,7 @@
                 alt="Background Evento" 
                 class="w-full h-full object-cover opacity-20"
             >
-            <!-- Gradient Overlay to ensure text readability -->
+            <!-- Gradient Overlay -->
             <div class="absolute inset-0 bg-gradient-to-r from-brand-dark via-brand-dark/90 to-brand-dark/70"></div>
         </div>
 
@@ -80,11 +83,10 @@
                 <img src="https://raw.githubusercontent.com/samueleliasoliveira/varcomtecnologia/refs/heads/main/assets/img/plannerlogo_img1.png" alt="Planner System Logo" class="h-6 md:h-8 w-auto">
             </div>
 
-            <!-- Adicionado 'flex flex-col-reverse' para inverter no mobile -->
+            <!-- Layout Invertido no Mobile -->
             <div class="flex flex-col-reverse lg:grid lg:grid-cols-12 lg:gap-8 items-center">
                 
-                <!-- Text Content (Left Side - 5 Columns) -->
-                <!-- No mobile, ficará embaixo devido ao 'flex-col-reverse' -->
+                <!-- Text Content -->
                 <div class="lg:col-span-5 text-center lg:text-left mb-12 lg:mb-0 mt-8 lg:mt-0">
                     <div class="inline-flex items-center px-3 py-1 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-sm font-semibold mb-6">
                         <span class="w-2 h-2 rounded-full bg-brand-accent mr-2 animate-pulse"></span>
@@ -97,25 +99,23 @@
                         O ecossistema digital definitivo para gestão de eventos corporativos. Centralize Staff, Custos e Financeiro em um único lugar e elimine os custos invisíveis da sua operação.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                        <a href="#contact" class="bg-brand-accent hover:bg-brand-accentHover text-white text-lg font-bold py-4 px-8 rounded-lg shadow-lg shadow-blue-500/30 transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2">
-                            QUERO AGENDAR UM TESTE PRÁTICO
-                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        <a href="#offer-section" class="bg-brand-accent hover:bg-brand-accentHover text-white text-lg font-bold py-4 px-8 rounded-lg shadow-lg shadow-blue-500/30 transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2">
+                            LIBERAR TESTE GRÁTIS
+                            <i data-lucide="arrow-down" class="w-5 h-5"></i>
                         </a>
                     </div>
                     <p class="mt-4 text-slate-400 text-sm">
-                        * Não é necessário cartão de crédito para demonstração.
+                        * Não é necessário cartão de crédito para começar.
                     </p>
                 </div>
 
-                <!-- Hero Image (Right Side - 7 Columns - Raw Image) -->
-                <!-- No mobile, ficará no topo devido ao 'flex-col-reverse' -->
+                <!-- Hero Image -->
                 <div class="lg:col-span-7 relative flex justify-center lg:justify-end w-full">
                     <img 
                         src="https://raw.githubusercontent.com/samueleliasoliveira/varcomtecnologia/refs/heads/main/assets/img/plannersystem_img1.png" 
                         alt="Interface do Planner System" 
                         class="w-full h-auto object-contain relative z-10"
                     >
-                    <!-- Subtle ambient glow only -->
                     <div class="absolute inset-0 bg-brand-accent/5 blur-3xl -z-10 rounded-full opacity-30 transform scale-75"></div>
                 </div>
             </div>
@@ -171,125 +171,206 @@
         </div>
     </section>
 
-    <!-- 3. A Solução (Funcionalidades) -->
-    <section class="py-20 bg-white relative overflow-hidden">
+    <!-- 3. Seção Centralização (Lado a Lado) -->
+    <section class="py-20 bg-white border-b border-slate-100 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-20 items-center">
+                
+                <!-- Conteúdo de Texto -->
+                <div class="mb-12 lg:mb-0">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-brand-accent text-sm font-semibold mb-4">
+                        <i data-lucide="network" class="w-4 h-4"></i>
+                        Ecossistema Integrado
+                    </div>
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-brand-dark leading-tight mb-6">
+                        Conte com a <span class="text-brand-accent">PlannerSystem</span> para conectar sua equipe e centralizar toda a sua operação em uma única plataforma.
+                    </h2>
+                    <p class="text-lg text-slate-600 leading-relaxed mb-8">
+                        Chega de informações espalhadas. Unifique o operacional, financeiro e RH em um ambiente intuitivo projetado especificamente para o setor de eventos.
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="flex -space-x-3">
+                            <div class="w-10 h-10 rounded-full bg-slate-200 border-2 border-white flex items-center justify-center text-xs font-bold text-slate-500">OP</div>
+                            <div class="w-10 h-10 rounded-full bg-slate-300 border-2 border-white flex items-center justify-center text-xs font-bold text-slate-500">FIN</div>
+                            <div class="w-10 h-10 rounded-full bg-slate-400 border-2 border-white flex items-center justify-center text-xs font-bold text-white">RH</div>
+                        </div>
+                        <p class="text-sm text-slate-500 font-medium">Todos os departamentos conectados.</p>
+                    </div>
+                </div>
+
+                <!-- Imagem -->
+                <div class="relative">
+                    <div class="relative z-10 transform transition-transform hover:scale-[1.02] duration-500">
+                        <img 
+                            src="https://raw.githubusercontent.com/plannersystempp/landing-page/refs/heads/main/plannersystem_img2.png" 
+                            alt="Ecossistema Planner System - Centralização de Operações" 
+                            class="w-full h-auto rounded-2xl shadow-2xl border border-slate-100"
+                        >
+                    </div>
+                    <!-- Decorativo -->
+                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-tr from-brand-accent/10 to-transparent rounded-full blur-3xl -z-0"></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Seção Funcionalidades (Imagem Esq, Texto Dir) -->
+    <section class="py-20 bg-slate-50 relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center mb-16">
-                <span class="text-brand-accent font-semibold tracking-wider uppercase text-sm">Ecossistema Completo</span>
-                <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mt-2">
-                    Tudo que você precisa em uma única plataforma
-                </h2>
-                <p class="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">
-                    Centralize a gestão de staff, custos e folha de pagamento. Substitua ferramentas manuais por processos inteligentes.
-                </p>
+            
+            <div class="lg:grid lg:grid-cols-12 lg:gap-8 items-center mb-16">
+                <!-- Coluna Imagem (Esquerda - Agora Ampliada) -->
+                <div class="lg:col-span-7 relative flex justify-center lg:justify-start order-2 lg:order-1 mb-8 lg:mb-0">
+                    <img 
+                        src="https://raw.githubusercontent.com/plannersystempp/landing-page/refs/heads/main/plannersystemtelacomcelular.png" 
+                        alt="Planner System em Múltiplos Dispositivos" 
+                        class="w-full h-auto object-contain drop-shadow-2xl hover:scale-[1.02] transition-transform duration-500"
+                    >
+                </div>
+
+                <!-- Coluna Texto (Direita - Menor) -->
+                <div class="lg:col-span-5 text-center lg:text-left order-1 lg:order-2">
+                    <span class="text-brand-accent font-semibold tracking-wider uppercase text-sm">Tecnologia de Ponta</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mt-2 leading-tight">
+                        Tudo que você precisa em uma única plataforma
+                    </h2>
+                    <p class="mt-4 text-lg text-slate-600 leading-relaxed">
+                        Centralize a gestão de staff, custos e folha de pagamento. Substitua ferramentas manuais por processos inteligentes.
+                    </p>
+                    
+                    <!-- Compatibilidade com Ícones -->
+                    <div class="flex items-center justify-center lg:justify-start gap-4 mt-6 text-slate-500">
+                        <span class="text-sm font-medium">Compatível com:</span>
+                        <div class="flex gap-4 items-center">
+                            <!-- Windows -->
+                            <div class="flex flex-col items-center gap-1 group">
+                                <svg class="w-6 h-6 fill-current text-slate-400 group-hover:text-blue-600 transition-colors" viewBox="0 0 24 24"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4h-13.05M0 12.552h9.75v9.451L0 20.699M10.949 12.6h13.05v11.4l-13.05-1.931"/></svg>
+                                <span class="text-[10px] uppercase font-bold opacity-0 group-hover:opacity-100 transition-opacity">Windows</span>
+                            </div>
+                            <!-- iOS -->
+                            <div class="flex flex-col items-center gap-1 group">
+                                <svg class="w-6 h-6 fill-current text-slate-400 group-hover:text-gray-900 transition-colors" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.68-.83 1.14-1.99.94-3.11-1.08.06-2.36.72-3.03 1.53-.6.73-1.12 1.89-.94 3.06 1.13.08 2.39-.68 3.03-1.48z"/></svg>
+                                <span class="text-[10px] uppercase font-bold opacity-0 group-hover:opacity-100 transition-opacity">iOS</span>
+                            </div>
+                            <!-- Android -->
+                            <div class="flex flex-col items-center gap-1 group">
+                                <svg class="w-6 h-6 fill-current text-slate-400 group-hover:text-green-500 transition-colors" viewBox="0 0 24 24"><path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993.0001.5511-.4482.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993 0 .5511-.4482.9997-.9993.9997m11.4045-6.02l1.9973-3.4592a.416.416 0 00-.1521-.5676.416.416 0 00-.5676.1521l-2.0223 3.503C15.5902 8.0022 13.8525 7.5 12 7.5s-3.5902.5022-5.1364 1.4497L4.8413 5.4467a.416.416 0 00-.5676-.1521.416.416 0 00-.1521.5676l1.9973 3.4592C2.6889 11.1867.3432 14.6589 0 18.761h24c-.3432-4.1021-2.6889-7.5743-6.1185-9.4396"/></svg>
+                                <span class="text-[10px] uppercase font-bold opacity-0 group-hover:opacity-100 transition-opacity">Android</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Feature 1: Gestão de Eventos -->
-                <div class="group bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:border-brand-accent/20 hover:shadow-lg transition-all duration-300">
-                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-6 group-hover:bg-brand-accent group-hover:text-white transition-colors">
-                        <i data-lucide="calendar-days" class="w-6 h-6"></i>
-                    </div>
+                <!-- Cards de Funcionalidades -->
+                <div class="group bg-white p-8 rounded-2xl border border-slate-200 hover:border-brand-accent/20 hover:shadow-lg transition-all duration-300">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-6 group-hover:bg-brand-accent group-hover:text-white transition-colors"><i data-lucide="calendar-days" class="w-6 h-6"></i></div>
                     <h3 class="text-xl font-bold text-brand-dark mb-3">Gestão de Eventos</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">
-                        Crie e gerencie eventos com datas precisas, controle de status e organização completa para máxima eficiência operacional.
-                    </p>
+                    <p class="text-slate-600 text-sm leading-relaxed">Crie e gerencie eventos com datas precisas, controle de status e organização completa para máxima eficiência operacional.</p>
                 </div>
-
-                <!-- Feature 2: Controle de Staff -->
-                <div class="group bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:border-brand-accent/20 hover:shadow-lg transition-all duration-300">
-                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-6 group-hover:bg-brand-accent group-hover:text-white transition-colors">
-                        <i data-lucide="users-round" class="w-6 h-6"></i>
-                    </div>
+                <div class="group bg-white p-8 rounded-2xl border border-slate-200 hover:border-brand-accent/20 hover:shadow-lg transition-all duration-300">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-6 group-hover:bg-brand-accent group-hover:text-white transition-colors"><i data-lucide="users-round" class="w-6 h-6"></i></div>
                     <h3 class="text-xl font-bold text-brand-dark mb-3">Controle de Staff</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">
-                        Cadastre funcionários fixos e freelancers, defina funções específicas e gerencie alocações por departamento com facilidade.
-                    </p>
+                    <p class="text-slate-600 text-sm leading-relaxed">Cadastre funcionários fixos e freelancers, defina funções específicas e gerencie alocações por departamento.</p>
                 </div>
-
-                <!-- Feature 3: Lançamento de Horas -->
-                <div class="group bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:border-brand-accent/20 hover:shadow-lg transition-all duration-300">
-                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-6 group-hover:bg-brand-accent group-hover:text-white transition-colors">
-                        <i data-lucide="clock" class="w-6 h-6"></i>
-                    </div>
+                <div class="group bg-white p-8 rounded-2xl border border-slate-200 hover:border-brand-accent/20 hover:shadow-lg transition-all duration-300">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-6 group-hover:bg-brand-accent group-hover:text-white transition-colors"><i data-lucide="clock" class="w-6 h-6"></i></div>
                     <h3 class="text-xl font-bold text-brand-dark mb-3">Lançamento de Horas</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">
-                        Registre horas com regras claras: limiar diário gera 1 cachê não cumulativo automaticamente. Adeus cálculos manuais de HE.
-                    </p>
+                    <p class="text-slate-600 text-sm leading-relaxed">Registre horas com regras claras: limiar diário gera 1 cachê não cumulativo automaticamente.</p>
                 </div>
-
-                <!-- Feature 4: Folha de Pagamento -->
-                <div class="group bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:border-brand-accent/20 hover:shadow-lg transition-all duration-300">
-                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-6 group-hover:bg-brand-accent group-hover:text-white transition-colors">
-                        <i data-lucide="wallet" class="w-6 h-6"></i>
-                    </div>
+                <div class="group bg-white p-8 rounded-2xl border border-slate-200 hover:border-brand-accent/20 hover:shadow-lg transition-all duration-300">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-6 group-hover:bg-brand-accent group-hover:text-white transition-colors"><i data-lucide="wallet" class="w-6 h-6"></i></div>
                     <h3 class="text-xl font-bold text-brand-dark mb-3">Folha de Pagamento</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">
-                        Calcule automaticamente pagamentos baseados em cachês diários e horas extras com precisão total e gere recibos.
-                    </p>
+                    <p class="text-slate-600 text-sm leading-relaxed">Calcule automaticamente pagamentos baseados em cachês diários e horas extras com precisão total.</p>
                 </div>
-
-                <!-- Feature 5: Estimativa de Custos -->
-                <div class="group bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:border-brand-accent/20 hover:shadow-lg transition-all duration-300">
-                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-6 group-hover:bg-brand-accent group-hover:text-white transition-colors">
-                        <i data-lucide="bar-chart-3" class="w-6 h-6"></i>
-                    </div>
+                <div class="group bg-white p-8 rounded-2xl border border-slate-200 hover:border-brand-accent/20 hover:shadow-lg transition-all duration-300">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-6 group-hover:bg-brand-accent group-hover:text-white transition-colors"><i data-lucide="bar-chart-3" class="w-6 h-6"></i></div>
                     <h3 class="text-xl font-bold text-brand-dark mb-3">Estimativa de Custos</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">
-                        Visualize custos estimados por evento e acompanhe o orçamento em tempo real com dashboards intuitivos e visuais.
-                    </p>
+                    <p class="text-slate-600 text-sm leading-relaxed">Visualize custos estimados por evento e acompanhe o orçamento em tempo real com dashboards intuitivos.</p>
                 </div>
-
-                <!-- Feature 6: Relatórios Inteligentes -->
-                <div class="group bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:border-brand-accent/20 hover:shadow-lg transition-all duration-300">
-                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-6 group-hover:bg-brand-accent group-hover:text-white transition-colors">
-                        <i data-lucide="file-spreadsheet" class="w-6 h-6"></i>
-                    </div>
+                <div class="group bg-white p-8 rounded-2xl border border-slate-200 hover:border-brand-accent/20 hover:shadow-lg transition-all duration-300">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-6 group-hover:bg-brand-accent group-hover:text-white transition-colors"><i data-lucide="file-spreadsheet" class="w-6 h-6"></i></div>
                     <h3 class="text-xl font-bold text-brand-dark mb-3">Relatórios & Fornecedores</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">
-                        Gerencie fornecedores com catálogo de preços e gere relatórios completos de pagamentos com filtros avançados.
-                    </p>
+                    <p class="text-slate-600 text-sm leading-relaxed">Gerencie fornecedores com catálogo de preços e gere relatórios completos de pagamentos.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 4. Prova Social (Autoridade) -->
-    <section class="py-20 bg-brand-primary text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="lg:grid lg:grid-cols-2 gap-16 items-center">
-                <div>
-                    <h2 class="text-3xl font-bold mb-6">Resultados Comprovados na Prática</h2>
-                    <p class="text-slate-300 text-lg mb-8">
-                        Não é teoria, é campo de batalha. Veja o que aconteceu quando a <span class="text-brand-accent font-bold">LAF TECH</span> implementou o Planner System em sua gestão operacional.
-                    </p>
-                    <div class="flex items-center gap-4">
-                        <div class="bg-white/10 p-4 rounded-lg backdrop-blur">
-                            <span class="block text-2xl font-bold text-white">LAF TECH</span>
-                            <span class="text-sm text-slate-400">Agência Parceira</span>
+    <!-- 5. Prova Social (Case LAF TECH) - CARD REDUZIDO -->
+    <section class="py-16 bg-white text-slate-800 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-1/3 h-full bg-blue-50 backdrop-blur-3xl -skew-x-12 transform translate-x-20"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-10">
+                <h2 class="text-2xl md:text-3xl font-bold text-brand-dark mb-4">
+                    Não é mágica, é <span class="text-brand-accent">Tecnologia</span>
+                </h2>
+                <p class="text-slate-600 text-lg max-w-2xl mx-auto">
+                    Veja como agências reais estão transformando caos em lucro com o ecossistema Planner System.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-12 gap-6 lg:gap-8">
+                <!-- Coluna Esquerda: Case -->
+                <div class="lg:col-span-5 flex flex-col h-full">
+                    <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 h-full flex flex-col relative overflow-hidden group hover:border-brand-accent/50 transition-colors duration-300 shadow-sm">
+                        <div class="absolute top-6 right-6">
+                            <span class="inline-flex items-center px-2 py-1 rounded-full bg-green-100 border border-green-200 text-green-700 text-[10px] font-bold uppercase tracking-wider">
+                                <i data-lucide="badge-check" class="w-3 h-3 mr-1"></i>
+                                Case Verificado
+                            </span>
+                        </div>
+                        <div class="mb-auto">
+                            <h3 class="text-xl font-bold text-brand-dark mb-1">LAF TECH</h3>
+                            <p class="text-[10px] text-slate-500 uppercase tracking-widest font-semibold mb-4">Agência Parceira</p>
+                            <blockquote class="text-base text-slate-700 italic leading-relaxed mb-4 relative z-10">
+                                "Antes do Planner System, fechávamos o financeiro no escuro. Hoje, sei exatamente onde está cada centavo da operação em tempo real."
+                            </blockquote>
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 bg-brand-accent rounded-full flex items-center justify-center text-white font-bold text-base">LF</div>
+                                <div>
+                                    <p class="font-bold text-brand-dark text-sm">Diretor de Operações</p>
+                                    <p class="text-xs text-slate-500">LAF TECH Eventos</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-10 lg:mt-0">
-                    <!-- Metric 1 -->
-                    <div class="bg-white/5 border border-white/10 p-6 rounded-xl">
-                        <div class="text-4xl font-bold text-brand-accent mb-2">30%</div>
-                        <div class="text-sm text-slate-300 uppercase tracking-wide">Redução de Custos Operacionais</div>
-                    </div>
-                    <!-- Metric 2 -->
-                    <div class="bg-white/5 border border-white/10 p-6 rounded-xl">
-                        <div class="text-4xl font-bold text-brand-accent mb-2">60%</div>
-                        <div class="text-sm text-slate-300 uppercase tracking-wide">Aumento de Eficiência</div>
-                    </div>
-                    <!-- Metric 3 -->
-                    <div class="col-span-1 sm:col-span-2 bg-white/5 border border-white/10 p-6 rounded-xl flex items-center gap-4">
-                        <div class="bg-green-500/20 p-3 rounded-full">
-                            <i data-lucide="check" class="text-green-400 w-6 h-6"></i>
+                <!-- Coluna Direita: Metrics -->
+                <div class="lg:col-span-7">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 h-full">
+                        <div class="bg-slate-50 border border-slate-200 p-5 rounded-2xl hover:bg-white hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
+                            <div class="flex justify-between items-start mb-2">
+                                <div class="p-2 bg-blue-100 rounded-xl text-brand-accent group-hover:bg-brand-accent group-hover:text-white transition-colors"><i data-lucide="trending-down" class="w-6 h-6"></i></div>
+                                <span class="text-[10px] text-slate-500 uppercase font-bold tracking-wider">Economia</span>
+                            </div>
+                            <div>
+                                <span class="block text-3xl font-extrabold text-brand-dark mb-1 tracking-tight">30%</span>
+                                <p class="text-slate-600 text-sm font-medium">Redução de Custos Operacionais</p>
+                            </div>
                         </div>
-                        <div>
-                            <div class="text-3xl font-bold text-white">98%</div>
-                            <div class="text-sm text-slate-300 uppercase tracking-wide">Melhoria na Gestão Operacional</div>
+                        <div class="bg-slate-50 border border-slate-200 p-5 rounded-2xl hover:bg-white hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
+                            <div class="flex justify-between items-start mb-2">
+                                <div class="p-2 bg-green-100 rounded-xl text-green-600 group-hover:bg-green-600 group-hover:text-white transition-colors"><i data-lucide="zap" class="w-6 h-6"></i></div>
+                                <span class="text-[10px] text-slate-500 uppercase font-bold tracking-wider">Produtividade</span>
+                            </div>
+                            <div>
+                                <span class="block text-3xl font-extrabold text-brand-dark mb-1 tracking-tight">60%</span>
+                                <p class="text-slate-600 text-sm font-medium">Aumento de Eficiência</p>
+                            </div>
+                        </div>
+                        <div class="sm:col-span-2 bg-brand-dark border border-slate-700 p-5 rounded-2xl flex items-center justify-between relative overflow-hidden group shadow-lg">
+                            <div class="relative z-10">
+                                <p class="text-blue-200 text-[10px] uppercase font-bold tracking-wider mb-1">Controle Total</p>
+                                <span class="block text-4xl font-extrabold text-white tracking-tight mb-1">98%</span>
+                                <p class="text-white text-sm font-medium">Melhoria na Gestão Operacional</p>
+                            </div>
+                            <div class="relative z-10 bg-white/10 p-3 rounded-full backdrop-blur-md">
+                                <i data-lucide="check-circle-2" class="w-8 h-8 text-green-400"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -297,72 +378,139 @@
         </div>
     </section>
 
-    <!-- 5. Call to Action Final (Rodapé/Formulário) -->
+    <!-- 6. Oferta Especial (30 Dias Grátis) - MANTIDA GRANDE -->
+    <section id="offer-section" class="py-20 bg-brand-dark relative overflow-hidden border-t border-slate-800">
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+            <div class="absolute top-0 right-0 w-full h-full bg-gradient-to-br from-brand-dark via-brand-dark to-brand-accent/10"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="lg:grid lg:grid-cols-12 lg:gap-12 items-center">
+                <div class="lg:col-span-7 text-center lg:text-left mb-12 lg:mb-0">
+                    <div class="inline-flex items-center px-3 py-1 rounded-full bg-green-500/10 border border-green-500/30 text-green-400 text-xs font-bold uppercase tracking-wider mb-6 animate-pulse-slow">
+                        <span class="w-2 h-2 rounded-full bg-green-500 mr-2"></span>
+                        Acesso Liberado para Teste
+                    </div>
+                    <!-- Título MANTIDO GRANDE para Destaque -->
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-white leading-tight mb-6">
+                        Use o Planner System por <span class="text-brand-accent">30 dias grátis.</span> Por nossa conta.
+                    </h2>
+                    <p class="text-lg text-slate-300 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                        Não queremos que você pague para ver. Queremos que você veja os resultados, elimine os custos invisíveis e só depois decida continuar. <strong>Risco zero para sua agência.</strong>
+                    </p>
+                    <div class="space-y-4 mb-8 text-left max-w-md mx-auto lg:mx-0">
+                        <div class="flex items-start gap-3 text-slate-200"><div class="bg-green-500/20 p-1 rounded-full mt-1"><i data-lucide="check" class="w-4 h-4 text-green-400"></i></div><span><strong class="text-white">Sem Cartão de Crédito</strong> obrigatório agora.</span></div>
+                        <div class="flex items-start gap-3 text-slate-200"><div class="bg-green-500/20 p-1 rounded-full mt-1"><i data-lucide="check" class="w-4 h-4 text-green-400"></i></div><span><strong class="text-white">Acesso Ilimitado</strong> a todas as funcionalidades.</span></div>
+                        <div class="flex items-start gap-3 text-brand-accent bg-brand-accent/5 p-3 rounded-lg border border-brand-accent/20"><div class="bg-brand-accent/20 p-1 rounded-full mt-1"><i data-lucide="gift" class="w-4 h-4 text-brand-accent"></i></div><span><strong>BÔNUS VIP:</strong> Setup Guiado + Importação de Dados da sua Planilha Grátis</span></div>
+                    </div>
+                </div>
+                <div class="lg:col-span-5 relative">
+                    <div class="bg-white rounded-2xl shadow-2xl overflow-hidden border-4 border-brand-accent/20 relative transform transition-transform hover:-translate-y-1 duration-300">
+                        <div class="bg-green-600 text-white text-center py-2 text-sm font-bold uppercase tracking-wide flex justify-center items-center gap-2"><i data-lucide="star" class="w-4 h-4"></i> Condição de Lançamento</div>
+                        <div class="p-8">
+                            <div class="text-center mb-6">
+                                <p class="text-slate-400 text-sm mb-1 uppercase font-semibold tracking-wide">Plano Full Access</p>
+                                <div class="flex items-center justify-center gap-2 mb-2"><span class="text-6xl font-extrabold text-brand-dark tracking-tight">R$ 0,00</span></div>
+                                <p class="text-lg font-bold text-green-600 bg-green-50 py-1 px-4 rounded-full inline-block">30 DIAS TOTALMENTE GRÁTIS</p>
+                                <p class="text-slate-500 text-xs mt-3">Após 30 dias, apenas R$ 97/mês.</p>
+                            </div>
+                            <div class="flex justify-center items-center gap-4 mb-8 bg-slate-50 py-3 rounded-lg border border-slate-100">
+                                <div class="text-center"><span class="block text-2xl font-bold text-slate-800" id="offer-hours">04</span><span class="text-[10px] uppercase text-slate-500 font-semibold">Horas</span></div>
+                                <span class="text-slate-300 text-2xl">:</span>
+                                <div class="text-center"><span class="block text-2xl font-bold text-slate-800" id="offer-minutes">00</span><span class="text-[10px] uppercase text-slate-500 font-semibold">Min</span></div>
+                                <span class="text-slate-300 text-2xl">:</span>
+                                <div class="text-center"><span class="block text-2xl font-bold text-slate-800" id="offer-seconds">00</span><span class="text-[10px] uppercase text-slate-500 font-semibold">Seg</span></div>
+                            </div>
+                            <a href="#contact" class="block w-full bg-brand-accent hover:bg-brand-accentHover text-white text-center font-bold text-lg py-4 rounded-xl shadow-lg shadow-blue-600/30 transition-all mb-4 group ring-4 ring-blue-500/10">LIBERAR MEUS 30 DIAS GRÁTIS <i data-lucide="arrow-right" class="w-5 h-5 inline ml-1 group-hover:translate-x-1 transition-transform"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Seção Segmentos (Texto Reduzido & Botões Compactos) -->
+    <section class="py-24 bg-brand-dark text-white relative overflow-hidden border-t border-slate-800">
+        <div class="absolute inset-0 bg-gradient-to-b from-brand-dark to-slate-900 pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16 max-w-4xl mx-auto">
+                <!-- TEXTO REDUZIDO AQUI -->
+                <h2 class="text-2xl md:text-3xl font-bold mb-6 leading-tight">
+                    Tudo o que a sua empresa de eventos precisa, <span class="text-brand-accent">nós temos.</span>
+                </h2>
+                <p class="text-lg text-slate-300">
+                    Se você atua com eventos sociais ou corporativos, PlannerSystem é a solução ideal para profissionais de produção, espaços de eventos, buffet, som e muito mais.
+                </p>
+            </div>
+            <!-- Grid de Segmentos - BOTÕES COMPACTOS (h-20) -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+                <div class="group flex flex-col items-center justify-center p-2 bg-white/5 border border-white/5 rounded-xl hover:bg-brand-accent/10 hover:border-brand-accent/30 hover:-translate-y-1 transition-all duration-300 cursor-default h-20">
+                    <div class="w-8 h-8 rounded-full bg-brand-accent/20 flex items-center justify-center text-brand-accent mb-1.5 group-hover:bg-brand-accent group-hover:text-white transition-colors"><i data-lucide="clapperboard" class="w-4 h-4"></i></div>
+                    <span class="font-medium text-xs text-slate-200 group-hover:text-white text-center">Produtores</span>
+                </div>
+                <div class="group flex flex-col items-center justify-center p-2 bg-white/5 border border-white/5 rounded-xl hover:bg-brand-accent/10 hover:border-brand-accent/30 hover:-translate-y-1 transition-all duration-300 cursor-default h-20">
+                    <div class="w-8 h-8 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-400 mb-1.5 group-hover:bg-purple-500 group-hover:text-white transition-colors"><i data-lucide="tent" class="w-4 h-4"></i></div>
+                    <span class="font-medium text-xs text-slate-200 group-hover:text-white text-center">Espaços</span>
+                </div>
+                <div class="group flex flex-col items-center justify-center p-2 bg-white/5 border border-white/5 rounded-xl hover:bg-brand-accent/10 hover:border-brand-accent/30 hover:-translate-y-1 transition-all duration-300 cursor-default h-20">
+                    <div class="w-8 h-8 rounded-full bg-orange-500/20 flex items-center justify-center text-orange-400 mb-1.5 group-hover:bg-orange-500 group-hover:text-white transition-colors"><i data-lucide="utensils" class="w-4 h-4"></i></div>
+                    <span class="font-medium text-xs text-slate-200 group-hover:text-white text-center">Buffet</span>
+                </div>
+                <div class="group flex flex-col items-center justify-center p-2 bg-white/5 border border-white/5 rounded-xl hover:bg-brand-accent/10 hover:border-brand-accent/30 hover:-translate-y-1 transition-all duration-300 cursor-default h-20">
+                    <div class="w-8 h-8 rounded-full bg-yellow-500/20 flex items-center justify-center text-yellow-400 mb-1.5 group-hover:bg-yellow-500 group-hover:text-white transition-colors"><i data-lucide="speaker" class="w-4 h-4"></i></div>
+                    <span class="font-medium text-xs text-slate-200 group-hover:text-white text-center">Som & Luz</span>
+                </div>
+                <div class="group flex flex-col items-center justify-center p-2 bg-white/5 border border-white/5 rounded-xl hover:bg-brand-accent/10 hover:border-brand-accent/30 hover:-translate-y-1 transition-all duration-300 cursor-default h-20">
+                    <div class="w-8 h-8 rounded-full bg-blue-400/20 flex items-center justify-center text-blue-400 mb-1.5 group-hover:bg-blue-400 group-hover:text-white transition-colors"><i data-lucide="briefcase" class="w-4 h-4"></i></div>
+                    <span class="font-medium text-xs text-slate-200 group-hover:text-white text-center">Corporativo</span>
+                </div>
+                <div class="group flex flex-col items-center justify-center p-2 bg-white/5 border border-white/5 rounded-xl hover:bg-brand-accent/10 hover:border-brand-accent/30 hover:-translate-y-1 transition-all duration-300 cursor-default h-20">
+                    <div class="w-8 h-8 rounded-full bg-green-500/20 flex items-center justify-center text-green-400 mb-1.5 group-hover:bg-green-500 group-hover:text-white transition-colors"><i data-lucide="users" class="w-4 h-4"></i></div>
+                    <span class="font-medium text-xs text-slate-200 group-hover:text-white text-center">Staff & RH</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Formulário Final -->
     <section id="contact" class="py-20 bg-white">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="bg-brand-dark rounded-3xl overflow-hidden shadow-2xl">
                 <div class="lg:grid lg:grid-cols-2">
-                    
-                    <!-- Left Side: Copy -->
                     <div class="p-10 lg:p-12 flex flex-col justify-center relative overflow-hidden">
                         <div class="absolute top-0 left-0 w-full h-full bg-blue-600/10 z-0"></div>
                         <div class="relative z-10">
-                            <h2 class="text-3xl font-bold text-white mb-6">
-                                Vamos rodar um teste em um evento real?
-                            </h2>
-                            <p class="text-slate-300 mb-8">
-                                Pare de contratar no escuro. Veja a diferença na organização e no bolso imediatamente. Nossos especialistas vão te mostrar como configurar sua primeira operação.
-                            </p>
+                            <h2 class="text-3xl font-bold text-white mb-6">Vamos rodar um teste em um evento real?</h2>
+                            <p class="text-slate-300 mb-8">Pare de contratar no escuro. Veja a diferença na organização e no bolso imediatamente.</p>
                             <ul class="space-y-3 mb-8">
-                                <li class="flex items-center text-slate-300">
-                                    <i data-lucide="shield-check" class="w-5 h-5 text-brand-accent mr-3"></i>
-                                    Setup Guiado
-                                </li>
-                                <li class="flex items-center text-slate-300">
-                                    <i data-lucide="shield-check" class="w-5 h-5 text-brand-accent mr-3"></i>
-                                    Acesso ao Banco de Talentos
-                                </li>
+                                <li class="flex items-center text-slate-300"><i data-lucide="shield-check" class="w-5 h-5 text-brand-accent mr-3"></i> Setup Guiado</li>
+                                <li class="flex items-center text-slate-300"><i data-lucide="shield-check" class="w-5 h-5 text-brand-accent mr-3"></i> Acesso ao Banco de Talentos</li>
                             </ul>
                         </div>
                     </div>
-
-                    <!-- Right Side: Form -->
                     <div class="bg-white p-10 lg:p-12">
-                        <!-- ATENÇÃO: Configure a URL do Formspree abaixo no script, ou no 'action' caso prefira redirecionamento -->
                         <form id="leadForm" class="space-y-4">
-                            <!-- Os campos precisam ter o atributo 'name' para serem capturados -->
                             <div>
                                 <label for="name" class="block text-sm font-medium text-slate-700 mb-1">Nome Completo</label>
-                                <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-accent focus:border-transparent form-input" placeholder="Seu nome">
+                                <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-accent form-input" placeholder="Seu nome">
                             </div>
-                            
                             <div>
                                 <label for="agency" class="block text-sm font-medium text-slate-700 mb-1">Nome da Agência</label>
-                                <input type="text" id="agency" name="agency" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-accent focus:border-transparent form-input" placeholder="Sua agência">
+                                <input type="text" id="agency" name="agency" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-accent form-input" placeholder="Sua agência">
                             </div>
-
                             <div>
                                 <label for="whatsapp" class="block text-sm font-medium text-slate-700 mb-1">WhatsApp</label>
-                                <input type="tel" id="whatsapp" name="whatsapp" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-accent focus:border-transparent form-input" placeholder="(00) 00000-0000">
+                                <input type="tel" id="whatsapp" name="whatsapp" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-accent form-input" placeholder="(00) 00000-0000">
                             </div>
-
                             <div>
                                 <label for="email" class="block text-sm font-medium text-slate-700 mb-1">E-mail Corporativo</label>
-                                <input type="email" id="email" name="_replyto" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-accent focus:border-transparent form-input" placeholder="seu@email.com">
+                                <input type="email" id="email" name="_replyto" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-accent form-input" placeholder="seu@email.com">
                             </div>
-
-                            <button type="submit" class="w-full bg-brand-accent hover:bg-brand-accentHover text-white font-bold py-4 rounded-lg shadow-lg transform transition hover:-translate-y-1 duration-200 mt-2">
-                                FALAR COM ESPECIALISTA
-                            </button>
+                            <button type="submit" class="w-full bg-brand-accent hover:bg-brand-accentHover text-white font-bold py-4 rounded-lg shadow-lg transform transition hover:-translate-y-1 duration-200 mt-2">FALAR COM ESPECIALISTA</button>
                         </form>
-                        
-                        <!-- Success Message (Hidden by default) -->
                         <div id="successMessage" class="hidden text-center py-10">
-                            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <i data-lucide="check" class="text-green-600 w-8 h-8"></i>
-                            </div>
+                            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4"><i data-lucide="check" class="text-green-600 w-8 h-8"></i></div>
                             <h3 class="text-xl font-bold text-brand-dark">Solicitação Recebida!</h3>
-                            <p class="text-slate-600 mt-2">Nossa equipe entrará em contato em breve para agendar seu teste.</p>
+                            <p class="text-slate-600 mt-2">Nossa equipe entrará em contato em breve.</p>
                         </div>
                     </div>
                 </div>
@@ -376,70 +524,38 @@
             <div class="flex items-center gap-2">
                 <img src="https://raw.githubusercontent.com/samueleliasoliveira/varcomtecnologia/refs/heads/main/assets/img/plannerlogo_img1.png" alt="Planner System Logo" class="h-6 w-auto">
             </div>
-            <div class="text-slate-400 text-sm">
-                &copy; 2024 Planner System. Todos os direitos reservados.
-            </div>
+            <div class="text-slate-400 text-sm">&copy; 2024 Planner System. Todos os direitos reservados.</div>
         </div>
     </footer>
 
-    <!-- Widget Chat Flutuante -->
+    <!-- Chat Widget -->
     <div class="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-4">
-        
-        <!-- Janela do Chat (Inicialmente Oculta) -->
         <div id="chatWindow" class="hidden bg-white w-80 rounded-2xl shadow-2xl overflow-hidden border border-slate-200 transform transition-all duration-300 origin-bottom-right mb-2">
-            <!-- Cabeçalho do Chat -->
             <div class="bg-brand-accent p-4 flex items-center gap-3">
-                <div class="relative">
-                    <div class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-white">
-                        <i data-lucide="user" class="w-6 h-6"></i>
-                    </div>
-                    <div class="absolute bottom-0 right-0 w-3 h-3 bg-green-500 rounded-full border-2 border-brand-accent"></div>
-                </div>
-                <div>
-                    <h4 class="font-bold text-white text-sm">Suporte Planner System</h4>
-                    <p class="text-blue-100 text-xs">Online agora</p>
-                </div>
-                <button onclick="toggleChat()" class="ml-auto text-white/80 hover:text-white">
-                    <i data-lucide="x" class="w-5 h-5"></i>
-                </button>
+                <div class="relative"><div class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-white"><i data-lucide="user" class="w-6 h-6"></i></div><div class="absolute bottom-0 right-0 w-3 h-3 bg-green-500 rounded-full border-2 border-brand-accent"></div></div>
+                <div><h4 class="font-bold text-white text-sm">Suporte Planner System</h4><p class="text-blue-100 text-xs">Online agora</p></div>
+                <button onclick="toggleChat()" class="ml-auto text-white/80 hover:text-white"><i data-lucide="x" class="w-5 h-5"></i></button>
             </div>
-
-            <!-- Corpo do Chat -->
             <div class="p-4 bg-slate-50 h-64 flex flex-col gap-4 overflow-y-auto">
-                <!-- Mensagem do Sistema -->
                 <div class="flex items-start gap-2">
                     <div class="bg-white p-3 rounded-2xl rounded-tl-none shadow-sm border border-slate-100 max-w-[85%]">
-                        <p class="text-slate-600 text-sm">Olá! 👋 <br>Gostaria de agendar um teste prático e ver como o Planner System pode escalar suas operações?</p>
+                        <p class="text-slate-600 text-sm">Olá! 👋 <br>Gostaria de agendar um teste prático e ver como o Planner System pode escalar sua agência?</p>
                         <span class="text-[10px] text-slate-400 mt-1 block text-right">Agora</span>
                     </div>
                 </div>
             </div>
-
-            <!-- Rodapé com Ação -->
             <div class="p-3 bg-white border-t border-slate-100">
-                <a href="https://wa.me/5521965865470?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20teste%20pr%C3%A1tico%20do%20Planner%20System." target="_blank" class="flex items-center justify-center gap-2 w-full bg-brand-accent hover:bg-brand-accentHover text-white font-bold py-3 rounded-xl transition-colors shadow-sm hover:shadow group">
-                    <i data-lucide="message-circle" class="w-5 h-5"></i>
-                    Sim, vamos lá!
+                <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20teste%20pr%C3%A1tico%20do%20Planner%20System." target="_blank" class="flex items-center justify-center gap-2 w-full bg-brand-accent hover:bg-brand-accentHover text-white font-bold py-3 rounded-xl transition-colors shadow-sm hover:shadow group">
+                    <i data-lucide="message-circle" class="w-5 h-5"></i> Sim, vamos lá!
                 </a>
             </div>
         </div>
-
-        <!-- Container para Botão e CTA Lateral -->
         <div class="flex items-center gap-3">
-            <!-- CTA Mensagem (Ao lado do botão) -->
             <div class="bg-white py-2 px-4 rounded-xl shadow-lg border border-slate-100 animate-bounce hidden md:block cursor-pointer" onclick="toggleChat()">
-                <p class="font-bold text-sm text-slate-700 whitespace-nowrap flex items-center gap-2">
-                    Falar com Especialista 👋
-                </p>
+                <p class="font-bold text-sm text-slate-700 whitespace-nowrap flex items-center gap-2">Falar com Especialista 👋</p>
             </div>
-
-            <!-- Botão Flutuante (Cor Azul) -->
             <button onclick="toggleChat()" class="bg-brand-accent hover:bg-brand-accentHover text-white p-4 rounded-full shadow-lg shadow-blue-500/30 transition-transform hover:scale-110 flex items-center justify-center group relative">
-                <!-- Ping de notificação -->
-                <span class="absolute top-0 right-0 flex h-3 w-3">
-                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
-                <span class="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
-                </span>
+                <span class="absolute top-0 right-0 flex h-3 w-3"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span><span class="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span></span>
                 <i data-lucide="message-circle" class="w-7 h-7"></i>
             </button>
         </div>
@@ -447,61 +563,58 @@
 
     <!-- Scripts -->
     <script>
-        // Initialize Icons
         lucide.createIcons();
 
-        // Chat Toggle Logic
+        function startOfferCountdown() {
+            let duration = 4 * 60 * 60; 
+            const hoursEl = document.getElementById('offer-hours');
+            const minutesEl = document.getElementById('offer-minutes');
+            const secondsEl = document.getElementById('offer-seconds');
+            if (!hoursEl || !minutesEl || !secondsEl) return;
+            const timer = setInterval(() => {
+                const hours = Math.floor(duration / 3600);
+                const minutes = Math.floor((duration % 3600) / 60);
+                const seconds = duration % 60;
+                hoursEl.textContent = hours < 10 ? '0' + hours : hours;
+                minutesEl.textContent = minutes < 10 ? '0' + minutes : minutes;
+                secondsEl.textContent = seconds < 10 ? '0' + seconds : seconds;
+                if (--duration < 0) duration = 4 * 60 * 60; 
+            }, 1000);
+        }
+        startOfferCountdown();
+
         function toggleChat() {
             const chatWindow = document.getElementById('chatWindow');
             if (chatWindow.classList.contains('hidden')) {
                 chatWindow.classList.remove('hidden');
-                // Pequena animação de entrada
                 chatWindow.classList.add('opacity-0', 'scale-95');
-                setTimeout(() => {
-                    chatWindow.classList.remove('opacity-0', 'scale-95');
-                }, 10);
+                setTimeout(() => { chatWindow.classList.remove('opacity-0', 'scale-95'); }, 10);
             } else {
                 chatWindow.classList.add('hidden');
             }
         }
+        setTimeout(() => { const cw = document.getElementById('chatWindow'); if(cw.classList.contains('hidden')) toggleChat(); }, 5000);
 
-        // Abrir chat automaticamente após 5 segundos
-        setTimeout(() => {
-            const chatWindow = document.getElementById('chatWindow');
-            if(chatWindow.classList.contains('hidden')) {
-                toggleChat();
-            }
-        }, 5000);
-
-        // Handler do Formulário com Formspree (AJAX)
         document.getElementById('leadForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            
             const form = e.target;
             const data = new FormData(form);
             const btn = this.querySelector('button');
             const originalText = btn.innerText;
-            
-            // Simula estado de carregamento
             btn.innerText = 'ENVIANDO...';
             btn.disabled = true;
             btn.classList.add('opacity-75');
-
-            // URL do Formspree configurada com o seu ID
+            
             const formspreeUrl = "https://formspree.io/f/xdakbqoj"; 
 
             fetch(formspreeUrl, {
                 method: "POST",
                 body: data,
-                headers: {
-                    'Accept': 'application/json'
-                }
+                headers: { 'Accept': 'application/json' }
             }).then(response => {
                 if (response.ok) {
-                    // Sucesso!
                     this.style.display = 'none';
                     document.getElementById('successMessage').classList.remove('hidden');
-                    console.log('Formulário enviado via Formspree!');
                 } else {
                     response.json().then(data => {
                         if (Object.hasOwn(data, 'errors')) {
@@ -513,12 +626,9 @@
                     throw new Error('Erro no envio');
                 }
             }).catch(error => {
-                // Erro de rede ou outro
                 btn.innerText = originalText;
                 btn.disabled = false;
                 btn.classList.remove('opacity-75');
-                console.error('Erro:', error);
-                // O alert só aparece se realmente falhar a requisição
                 alert("Erro ao enviar. Verifique sua conexão e tente novamente.");
             });
         });
