@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planner System - Gestão de Eventos Corporativos</title>
     <meta name="description" content="O ecossistema digital definitivo para gestão de eventos corporativos. Centralize Staff, Custos e Financeiro.">
-    <link rel="icon" href="https://raw.githubusercontent.com/plannersystempp/landing-page/refs/heads/main/favicon_plannersystem.png" sizes="32x32">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -65,63 +64,79 @@
 </head>
 <body class="font-sans antialiased text-slate-800 bg-white">
 
-    <!-- 1. Hero Section (Dobra Principal) -->
-    <header class="relative bg-brand-dark pt-12 pb-20 lg:pt-20 lg:pb-32 overflow-hidden">
-        <!-- Background Image with Overlay -->
-        <div class="absolute inset-0 z-0">
-            <img 
-                src="https://www.circulandonews.com.br/wp-content/uploads/2023/10/Montagem-de-Palco-para-Show.jpg" 
-                alt="Background Evento" 
-                class="w-full h-full object-cover opacity-20"
-            >
-            <!-- Gradient Overlay -->
-            <div class="absolute inset-0 bg-gradient-to-r from-brand-dark via-brand-dark/90 to-brand-dark/70"></div>
+    <!-- 1. Hero Section (Dobra Principal - Minimalista e Clara) -->
+    <header class="relative bg-slate-50 pt-16 pb-20 lg:pt-24 lg:pb-28 overflow-hidden">
+        <!-- Elementos decorativos de fundo claros -->
+        <div class="absolute inset-0 overflow-hidden pointer-events-none z-0">
+            <div class="absolute -top-24 -right-24 w-96 h-96 bg-brand-accent/10 rounded-full blur-3xl"></div>
+            <div class="absolute top-1/2 -left-24 w-72 h-72 bg-blue-400/10 rounded-full blur-3xl"></div>
         </div>
 
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <!-- Logo -->
-            <div class="flex items-center justify-start mb-10">
-                <img src="https://raw.githubusercontent.com/samueleliasoliveira/varcomtecnologia/refs/heads/main/assets/img/plannerlogo_img1.png" alt="Planner System Logo" class="h-6 md:h-8 w-auto">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- Logo Centralizado -->
+            <div class="flex items-center justify-center mb-12">
+                <!-- A classe 'invert' transforma um logo branco em preto para contrastar com o fundo claro -->
+                <img src="https://raw.githubusercontent.com/samueleliasoliveira/varcomtecnologia/refs/heads/main/assets/img/plannerlogo_img1.png" alt="Planner System Logo" class="h-8 md:h-10 w-auto invert">
             </div>
 
-            <!-- Layout Invertido no Mobile -->
-            <div class="flex flex-col-reverse lg:grid lg:grid-cols-12 lg:gap-8 items-center">
+            <!-- Conteúdo de Texto Centralizado -->
+            <div class="text-center max-w-4xl mx-auto">
+                <div class="inline-flex items-center px-4 py-1.5 rounded-full border border-blue-200 bg-blue-100 text-brand-accent text-sm font-bold tracking-wide mb-8">
+                    <span class="w-2 h-2 rounded-full bg-brand-accent mr-2 animate-pulse"></span>
+                    Gestão Inteligente para Eventos
+                </div>
                 
-                <!-- Text Content -->
-                <div class="lg:col-span-5 text-center lg:text-left mb-12 lg:mb-0 mt-8 lg:mt-0">
-                    <div class="inline-flex items-center px-3 py-1 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-sm font-semibold mb-6">
-                        <span class="w-2 h-2 rounded-full bg-brand-accent mr-2 animate-pulse"></span>
-                        Gestão Inteligente para Eventos
-                    </div>
-                    <h1 class="text-4xl md:text-5xl font-extrabold text-white leading-tight mb-6">
-                        Sua agência está pronta para escalar ou você ainda <span class="text-brand-accent">depende de planilhas?</span>
-                    </h1>
-                    <p class="text-lg text-slate-300 mb-8 leading-relaxed">
-                        O ecossistema digital definitivo para gestão de eventos corporativos. Centralize Staff, Custos e Financeiro em um único lugar e elimine os custos invisíveis da sua operação.
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                        <a href="#offer-section" class="bg-brand-accent hover:bg-brand-accentHover text-white text-lg font-bold py-4 px-8 rounded-lg shadow-lg shadow-blue-500/30 transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2">
-                            LIBERAR TESTE GRÁTIS
-                            <i data-lucide="arrow-down" class="w-5 h-5"></i>
-                        </a>
-                    </div>
-                    <p class="mt-4 text-slate-400 text-sm">
-                        * Não é necessário cartão de crédito para começar.
-                    </p>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-brand-dark leading-tight mb-8">
+                    Sua agência está pronta para escalar ou você ainda <span class="text-brand-accent">depende de planilhas?</span>
+                </h1>
+                
+                <p class="text-lg md:text-xl text-slate-600 mb-10 leading-relaxed max-w-3xl mx-auto">
+                    O ecossistema digital definitivo para gestão de eventos corporativos. Centralize Staff, Custos e Financeiro em um único lugar e elimine os custos invisíveis da sua operação.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="#offer-section" class="bg-brand-accent hover:bg-brand-accentHover text-white text-lg font-bold py-4 px-10 rounded-xl shadow-xl shadow-blue-500/30 transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2">
+                        LIBERAR TESTE GRÁTIS
+                        <i data-lucide="arrow-down" class="w-5 h-5"></i>
+                    </a>
                 </div>
-
-                <!-- Hero Image -->
-                <div class="lg:col-span-7 relative flex justify-center lg:justify-end w-full">
-                    <img 
-                        src="https://raw.githubusercontent.com/samueleliasoliveira/varcomtecnologia/refs/heads/main/assets/img/plannersystem_img1.png" 
-                        alt="Interface do Planner System" 
-                        class="w-full h-auto object-contain relative z-10"
-                    >
-                    <div class="absolute inset-0 bg-brand-accent/5 blur-3xl -z-10 rounded-full opacity-30 transform scale-75"></div>
-                </div>
+                
+                <p class="mt-6 text-slate-500 text-sm font-medium">
+                    * Não é necessário cartão de crédito para começar.
+                </p>
             </div>
         </div>
     </header>
+
+    <!-- NOVA SECÇÃO: Vídeo de Demonstração (Abaixo do Hero) -->
+    <section class="py-20 bg-white border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <div class="inline-flex items-center px-3 py-1 rounded-full bg-blue-50 text-brand-accent text-sm font-semibold mb-4">
+                    <i data-lucide="play-circle" class="w-4 h-4 mr-2"></i>
+                    Veja em Ação
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-dark">
+                    Como o <span class="text-brand-accent">Planner System</span> funciona na prática
+                </h2>
+            </div>
+
+            <!-- Contentor do Vídeo Vertical -->
+            <div class="flex justify-center w-full relative">
+                <!-- Brilho de fundo -->
+                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-brand-accent/20 rounded-full blur-3xl -z-0"></div>
+                
+                <!-- Mockup do Telemóvel com Vimeo Embed -->
+                <div class="w-full max-w-[300px] lg:max-w-[340px] rounded-[2.5rem] overflow-hidden shadow-2xl shadow-brand-accent/30 border-[8px] border-slate-800 z-10 bg-black">
+                    <!-- Código Incorporado Fornecido -->
+                    <div style="padding:177.78% 0 0 0;position:relative;">
+                        <iframe src="https://player.vimeo.com/video/1166343933?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="O Gargalo dos Grandes Eventos: Como Resolver a Gestão de Equipes | PlannerSystem"></iframe>
+                    </div>
+                    <script src="https://player.vimeo.com/api/player.js"></script>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- 2. Seção da Dor (O Problema) -->
     <section class="py-20 bg-slate-50">
@@ -300,7 +315,7 @@
         </div>
     </section>
 
-    <!-- 5. Prova Social (Case LAFTECH) - CARD REDUZIDO -->
+    <!-- 5. Prova Social (Case LAF TECH) - CARD REDUZIDO -->
     <section class="py-16 bg-white text-slate-800 relative overflow-hidden">
         <div class="absolute top-0 right-0 w-1/3 h-full bg-blue-50 backdrop-blur-3xl -skew-x-12 transform translate-x-20"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -324,16 +339,16 @@
                             </span>
                         </div>
                         <div class="mb-auto">
-                            <h3 class="text-xl font-bold text-brand-dark mb-1">LAFTECH</h3>
-                            <p class="text-[10px] text-slate-500 uppercase tracking-widest font-semibold mb-4"> </p>
+                            <h3 class="text-xl font-bold text-brand-dark mb-1">LAF TECH</h3>
+                            <p class="text-[10px] text-slate-500 uppercase tracking-widest font-semibold mb-4">Agência Parceira</p>
                             <blockquote class="text-base text-slate-700 italic leading-relaxed mb-4 relative z-10">
-                                "O PlannerSystem veio acrescentar qualidade no dia a dia dos nossos pagamentos. É uma ferramenta que proporciona visibilidade abrangente a respeito dos eventos em andamento, realizados e futuros. Integra informações importantes sobre a equipe técnica, permite lançamento de custos por evento e aumenta a produtividade financeira da empresa. Tenho certeza de que fizemos um excelente investimento."
+                                "Antes do Planner System, fechávamos o financeiro no escuro. Hoje, sei exatamente onde está cada centavo da operação em tempo real."
                             </blockquote>
                             <div class="flex items-center gap-3">
                                 <div class="w-10 h-10 bg-brand-accent rounded-full flex items-center justify-center text-white font-bold text-base">LF</div>
                                 <div>
-                                    <p class="font-bold text-brand-dark text-sm">Gabriela Marinho</p>
-                                    <p class="text-xs text-slate-500">LAFTECH</p>
+                                    <p class="font-bold text-brand-dark text-sm">Diretor de Operações</p>
+                                    <p class="text-xs text-slate-500">LAF TECH Eventos</p>
                                 </div>
                             </div>
                         </div>
@@ -401,7 +416,7 @@
                     <div class="space-y-4 mb-8 text-left max-w-md mx-auto lg:mx-0">
                         <div class="flex items-start gap-3 text-slate-200"><div class="bg-green-500/20 p-1 rounded-full mt-1"><i data-lucide="check" class="w-4 h-4 text-green-400"></i></div><span><strong class="text-white">Sem Cartão de Crédito</strong> obrigatório agora.</span></div>
                         <div class="flex items-start gap-3 text-slate-200"><div class="bg-green-500/20 p-1 rounded-full mt-1"><i data-lucide="check" class="w-4 h-4 text-green-400"></i></div><span><strong class="text-white">Acesso Ilimitado</strong> a todas as funcionalidades.</span></div>
-                        <div class="flex items-start gap-3 text-brand-accent bg-brand-accent/5 p-3 rounded-lg border border-brand-accent/20"><div class="bg-brand-accent/20 p-1 rounded-full mt-1"><i data-lucide="gift" class="w-4 h-4 text-brand-accent"></i></div><span><strong>BÔNUS VIP:</strong> Setup Guiado + Importação de Dados da sua Planilha Grátis + Suporte Dedicado</span></div>
+                        <div class="flex items-start gap-3 text-brand-accent bg-brand-accent/5 p-3 rounded-lg border border-brand-accent/20"><div class="bg-brand-accent/20 p-1 rounded-full mt-1"><i data-lucide="gift" class="w-4 h-4 text-brand-accent"></i></div><span><strong>BÔNUS VIP:</strong> Setup Guiado + Importação de Dados da sua Planilha Grátis</span></div>
                     </div>
                 </div>
                 <div class="lg:col-span-5 relative">
@@ -412,7 +427,7 @@
                                 <p class="text-slate-400 text-sm mb-1 uppercase font-semibold tracking-wide">Plano Full Access</p>
                                 <div class="flex items-center justify-center gap-2 mb-2"><span class="text-6xl font-extrabold text-brand-dark tracking-tight">R$ 0,00</span></div>
                                 <p class="text-lg font-bold text-green-600 bg-green-50 py-1 px-4 rounded-full inline-block">30 DIAS TOTALMENTE GRÁTIS</p>
-                                <p class="text-slate-500 text-xs mt-3">Experimente sem compromisso.</p>
+                                <p class="text-slate-500 text-xs mt-3">Após 30 dias, apenas R$ 97/mês.</p>
                             </div>
                             <div class="flex justify-center items-center gap-4 mb-8 bg-slate-50 py-3 rounded-lg border border-slate-100">
                                 <div class="text-center"><span class="block text-2xl font-bold text-slate-800" id="offer-hours">04</span><span class="text-[10px] uppercase text-slate-500 font-semibold">Horas</span></div>
@@ -421,7 +436,7 @@
                                 <span class="text-slate-300 text-2xl">:</span>
                                 <div class="text-center"><span class="block text-2xl font-bold text-slate-800" id="offer-seconds">00</span><span class="text-[10px] uppercase text-slate-500 font-semibold">Seg</span></div>
                             </div>
-                            <a href="https://plannersystem.com.br/auth" class="block w-full bg-brand-accent hover:bg-brand-accentHover text-white text-center font-bold text-lg py-4 rounded-xl shadow-lg shadow-blue-600/30 transition-all mb-4 group ring-4 ring-blue-500/10">LIBERAR MEUS 30 DIAS GRÁTIS <i data-lucide="arrow-right" class="w-5 h-5 inline ml-1 group-hover:translate-x-1 transition-transform"></i></a>
+                            <a href="#contact" class="block w-full bg-brand-accent hover:bg-brand-accentHover text-white text-center font-bold text-lg py-4 rounded-xl shadow-lg shadow-blue-600/30 transition-all mb-4 group ring-4 ring-blue-500/10">LIBERAR MEUS 30 DIAS GRÁTIS <i data-lucide="arrow-right" class="w-5 h-5 inline ml-1 group-hover:translate-x-1 transition-transform"></i></a>
                         </div>
                     </div>
                 </div>
@@ -439,7 +454,7 @@
                     Tudo o que a sua empresa de eventos precisa, <span class="text-brand-accent">nós temos.</span>
                 </h2>
                 <p class="text-lg text-slate-300">
-                    Se você atua com eventos sociais ou corporativos, PlannerSystem é a solução ideal para profissionais de produção, espaços de eventos, agências, som e muito mais.
+                    Se você atua com eventos sociais ou corporativos, PlannerSystem é a solução ideal para profissionais de produção, espaços de eventos, buffet, som e muito mais.
                 </p>
             </div>
             <!-- Grid de Segmentos - BOTÕES COMPACTOS (h-20) -->
@@ -450,11 +465,11 @@
                 </div>
                 <div class="group flex flex-col items-center justify-center p-2 bg-white/5 border border-white/5 rounded-xl hover:bg-brand-accent/10 hover:border-brand-accent/30 hover:-translate-y-1 transition-all duration-300 cursor-default h-20">
                     <div class="w-8 h-8 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-400 mb-1.5 group-hover:bg-purple-500 group-hover:text-white transition-colors"><i data-lucide="tent" class="w-4 h-4"></i></div>
-                    <span class="font-medium text-xs text-slate-200 group-hover:text-white text-center">Locadoras</span>
+                    <span class="font-medium text-xs text-slate-200 group-hover:text-white text-center">Espaços</span>
                 </div>
                 <div class="group flex flex-col items-center justify-center p-2 bg-white/5 border border-white/5 rounded-xl hover:bg-brand-accent/10 hover:border-brand-accent/30 hover:-translate-y-1 transition-all duration-300 cursor-default h-20">
                     <div class="w-8 h-8 rounded-full bg-orange-500/20 flex items-center justify-center text-orange-400 mb-1.5 group-hover:bg-orange-500 group-hover:text-white transition-colors"><i data-lucide="utensils" class="w-4 h-4"></i></div>
-                    <span class="font-medium text-xs text-slate-200 group-hover:text-white text-center">Agências</span>
+                    <span class="font-medium text-xs text-slate-200 group-hover:text-white text-center">Buffet</span>
                 </div>
                 <div class="group flex flex-col items-center justify-center p-2 bg-white/5 border border-white/5 rounded-xl hover:bg-brand-accent/10 hover:border-brand-accent/30 hover:-translate-y-1 transition-all duration-300 cursor-default h-20">
                     <div class="w-8 h-8 rounded-full bg-yellow-500/20 flex items-center justify-center text-yellow-400 mb-1.5 group-hover:bg-yellow-500 group-hover:text-white transition-colors"><i data-lucide="speaker" class="w-4 h-4"></i></div>
@@ -484,7 +499,7 @@
                             <p class="text-slate-300 mb-8">Pare de contratar no escuro. Veja a diferença na organização e no bolso imediatamente.</p>
                             <ul class="space-y-3 mb-8">
                                 <li class="flex items-center text-slate-300"><i data-lucide="shield-check" class="w-5 h-5 text-brand-accent mr-3"></i> Setup Guiado</li>
-                                <li class="flex items-center text-slate-300"><i data-lucide="shield-check" class="w-5 h-5 text-brand-accent mr-3"></i> Importação de Dados</li>
+                                <li class="flex items-center text-slate-300"><i data-lucide="shield-check" class="w-5 h-5 text-brand-accent mr-3"></i> Acesso ao Banco de Talentos</li>
                             </ul>
                         </div>
                     </div>
@@ -510,8 +525,8 @@
                         </form>
                         <div id="successMessage" class="hidden text-center py-10">
                             <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4"><i data-lucide="check" class="text-green-600 w-8 h-8"></i></div>
-                            <h3 class="text-xl font-bold text-brand-dark">Solicitação Recebida!</h3>
-                            <p class="text-slate-600 mt-2">Nossa equipe entrará em contato em breve.</p>
+                            <h3 class="text-xl font-bold text-brand-dark">Redirecionando!</h3>
+                            <p class="text-slate-600 mt-2">Você está sendo levado para o nosso WhatsApp.</p>
                         </div>
                     </div>
                 </div>
@@ -540,14 +555,14 @@
             <div class="p-4 bg-slate-50 h-64 flex flex-col gap-4 overflow-y-auto">
                 <div class="flex items-start gap-2">
                     <div class="bg-white p-3 rounded-2xl rounded-tl-none shadow-sm border border-slate-100 max-w-[85%]">
-                        <p class="text-slate-600 text-sm">Olá! 👋 <br>Gostaria de agendar um teste prático e ver como o Planner System pode escalar suas operações?</p>
+                        <p class="text-slate-600 text-sm">Olá! 👋 <br>Gostaria de agendar um teste prático e ver como o Planner System pode escalar sua agência?</p>
                         <span class="text-[10px] text-slate-400 mt-1 block text-right">Agora</span>
                     </div>
                 </div>
             </div>
             <div class="p-3 bg-white border-t border-slate-100">
                 <a href="https://wa.me/5521965865470?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20teste%20pr%C3%A1tico%20do%20Planner%20System." target="_blank" class="flex items-center justify-center gap-2 w-full bg-brand-accent hover:bg-brand-accentHover text-white font-bold py-3 rounded-xl transition-colors shadow-sm hover:shadow group">
-                    <i data-lucide="" class="w-5 h-5"></i> Sim, vamos lá!
+                    <i data-lucide="message-circle" class="w-5 h-5"></i> Sim, vamos lá!
                 </a>
             </div>
         </div>
@@ -596,83 +611,46 @@
         }
         setTimeout(() => { const cw = document.getElementById('chatWindow'); if(cw.classList.contains('hidden')) toggleChat(); }, 5000);
 
+        // Lógica de Redirecionamento do Formulário para WhatsApp
         document.getElementById('leadForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const form = e.target;
-            const data = new FormData(form);
+            e.preventDefault(); // Impede o recarregamento da página
+
+            // Captura os valores digitados no formulário
+            const name = document.getElementById('name').value;
+            const agency = document.getElementById('agency').value;
+            const whatsapp = document.getElementById('whatsapp').value;
+            const email = document.getElementById('email').value;
+
+            // NÚMERO DO WHATSAPP DA EMPRESA (Substitua por seu número real, apenas números com DDD)
+            const companyPhone = "5521965865470"; 
+
+            // Monta a mensagem personalizada
+            const message = `Olá! Gostaria de agendar um teste do Planner System.\n\n*Meus Dados:*\n- Nome: ${name}\n- Agência: ${agency}\n- WhatsApp: ${whatsapp}\n- E-mail: ${email}`;
+
+            // Cria a URL formatada do WhatsApp
+            const whatsappUrl = `https://wa.me/${companyPhone}?text=${encodeURIComponent(message)}`;
+
+            // UI Feedback (Mostra que está enviando)
             const btn = this.querySelector('button');
             const originalText = btn.innerText;
-            btn.innerText = 'ENVIANDO...';
+            btn.innerText = 'REDIRECIONANDO...';
             btn.disabled = true;
             btn.classList.add('opacity-75');
             
-            const formspreeUrl = "https://formspree.io/f/xdakbqoj"; 
+            // Abre o WhatsApp numa nova aba
+            window.open(whatsappUrl, '_blank');
 
-            fetch(formspreeUrl, {
-                method: "POST",
-                body: data,
-                headers: { 'Accept': 'application/json' }
-            }).then(response => {
-                if (response.ok) {
-                    this.style.display = 'none';
-                    document.getElementById('successMessage').classList.remove('hidden');
-                } else {
-                    response.json().then(data => {
-                        if (Object.hasOwn(data, 'errors')) {
-                            alert(data["errors"].map(error => error["message"]).join(", "));
-                        } else {
-                            alert("Ops! Ocorreu um problema ao enviar seu formulário.");
-                        }
-                    });
-                    throw new Error('Erro no envio');
-                }
-            }).catch(error => {
+            // Oculta o formulário e mostra a mensagem de sucesso na tela atual
+            setTimeout(() => {
+                this.style.display = 'none';
+                document.getElementById('successMessage').classList.remove('hidden');
+                
+                // Restaura o botão caso o usuário queira preencher de novo depois
                 btn.innerText = originalText;
                 btn.disabled = false;
                 btn.classList.remove('opacity-75');
-                alert("Erro ao enviar. Verifique sua conexão e tente novamente.");
-            });
+            }, 1000);
         });
     </script>
 </body>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17854731657"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-17854731657');
-</script>
-
-<!-- Event snippet for Enviar formulário de lead conversion page
-In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
-<script>
-function gtag_report_conversion(url) {
-  var callback = function () {
-    if (typeof(url) != 'undefined') {
-      window.location = url;
-    }
-  };
-  gtag('event', 'conversion', {
-      'send_to': 'AW-17854731657/yvKICMyr390bEImr5sFC',
-      'value': 1.0,
-      'currency': 'BRL',
-      'event_callback': callback
-  });
-  return false;
-}
-</script>
-
-<!-- Event snippet for Enviar formulário de lead conversion page -->
-<script>
-  gtag('event', 'conversion', {
-      'send_to': 'AW-17854731657/yvKICMyr390bEImr5sFC',
-      'value': 1.0,
-      'currency': 'BRL'
-  });
-</script>
-
-
 </html>
