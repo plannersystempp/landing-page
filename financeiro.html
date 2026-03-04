@@ -4,82 +4,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planner System | Gestão Financeira para Eventos</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="/assets/img/favicon_plannersystem.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; }
-        .bg-gradient-navy { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); }
-        .glass-card { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
-        /* Mantendo a proporção 16:9 de forma responsiva */
-        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 1rem; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); background-color: #000; }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 1rem; box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1); background-color: #000; }
         .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
         .scroll-smooth { scroll-behavior: smooth; }
+        
+        /* Animação do balão do WhatsApp */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-5px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float { animation: float 3s ease-in-out infinite; }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900 scroll-smooth">
+<body class="bg-white text-slate-900 scroll-smooth antialiased">
 
-    <!-- 1. PRIMEIRA DOBRA: Hero Section -->
-    <header class="bg-gradient-navy text-white pt-16 pb-24 px-4 overflow-hidden">
+    <!-- 1. PRIMEIRA DOBRA: Hero Section (Clara) -->
+    <header class="bg-gradient-to-b from-slate-50 to-slate-100 text-slate-900 pt-8 pb-20 px-4 overflow-hidden border-b border-slate-200">
         <div class="max-w-6xl mx-auto text-center">
-            <p class="text-blue-400 font-bold tracking-widest uppercase text-sm mb-4">
+            
+            <!-- Logo no Topo -->
+            <div class="mb-10 flex justify-center">
+                <img src="https://raw.githubusercontent.com/plannersystempp/landing-page/refs/heads/main/assets/img/plannersystem_logo_preto.png" alt="Logo Planner System" class="h-6 md:h-8 opacity-90">
+            </div>
+
+            <p class="text-blue-600 font-bold tracking-widest uppercase text-xs md:text-sm mb-4 px-2">
                 Para Donos de Agências e Diretores Financeiros que Gerenciam Eventos de Grande Porte
             </p>
-            <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
-                Estanque o <span class="text-emerald-400">vazamento de caixa</span> da sua agência e saiba o lucro exato de cada projeto.
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight text-slate-900 px-2">
+                Estanque o <span class="text-emerald-500">vazamento de caixa</span> da sua agência e saiba o lucro exato de cada projeto.
             </h1>
-            <p class="text-xl text-slate-300 mb-10 max-w-3xl mx-auto">
-                O Planner System substitui o caos das planilhas manuais por uma **gestão financeira blindada**: cálculos automáticos de cachês, controle rigoroso de horas extras e DRE em tempo real.
+            <p class="text-lg md:text-xl text-slate-600 mb-10 max-w-3xl mx-auto px-4">
+                O Planner System substitui o caos das planilhas manuais por uma <strong class="text-slate-800">gestão financeira blindada</strong>: cálculos automáticos de cachês, controle rigoroso de horas extras e DRE em tempo real.
             </p>
 
             <!-- Video Section -->
-            <div class="max-w-4xl mx-auto mb-12">
-                <div class="video-container">
-                    <!-- Código incorporado conforme solicitado para evitar erro 153 -->
+            <div class="max-w-4xl mx-auto mb-10 px-2">
+                <div class="video-container border border-slate-200">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/EuxfT-v_gYQ" title="Título do vídeo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
-                <p class="mt-4 text-slate-400 italic">"Aperte o play e veja como o Planner System automatiza o cálculo de staff e fornecedores, eliminando erros humanos em poucos cliques."</p>
+                <p class="mt-4 text-slate-500 italic text-sm md:text-base">"Aperte o play e veja como o Planner System automatiza o cálculo de staff e fornecedores, eliminando erros humanos em poucos cliques."</p>
             </div>
 
-            <a href="#demo" class="inline-block bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-5 px-10 rounded-full text-xl transition transform hover:scale-105 shadow-2xl">
+            <a href="#demo" class="inline-block bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-4 px-8 md:py-5 md:px-10 rounded-full text-lg md:text-xl transition transform hover:scale-105 shadow-xl mx-4">
                 👉 QUERO PROTEGER O CAIXA DA MINHA EMPRESA (Agendar Demo)
             </a>
         </div>
     </header>
 
     <!-- 2. SEGUNDA DOBRA: Choque de Realidade -->
-    <section class="py-20 px-4 bg-white">
+    <section class="py-16 md:py-24 px-4 bg-white">
         <div class="max-w-5xl mx-auto">
             <div class="flex flex-col md:flex-row items-center gap-12">
                 <div class="md:w-1/2">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-slate-900">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-slate-900 leading-tight">
                         Você fatura alto, mas onde está o lucro no final do mês?
                     </h2>
-                    <p class="text-lg text-slate-600 mb-6 leading-relaxed">
-                        A realidade de quem não tem o Planner System é um **ciclo de perda invisível**:
+                    <p class="text-base md:text-lg text-slate-600 mb-6 leading-relaxed">
+                        A realidade de quem não tem o Planner System é um <strong class="text-slate-800">ciclo de perda invisível</strong>:
                     </p>
                     <ul class="space-y-4 text-slate-700">
-                        <li class="flex items-start">
-                            <span class="text-red-500 mr-2">✕</span>
-                            <span>Cruzar listas de presença do WhatsApp com planilhas de Excel que ninguém atualiza.</span>
+                        <li class="flex items-start bg-slate-50 p-3 rounded-lg border border-slate-100">
+                            <span class="text-red-500 mr-3 mt-1 font-bold">✕</span>
+                            <span class="text-sm md:text-base">Cruzar listas de presença do WhatsApp com planilhas de Excel que ninguém atualiza.</span>
                         </li>
-                        <li class="flex items-start">
-                            <span class="text-red-500 mr-2">✕</span>
-                            <span>Pagar **cachês em duplicidade** ou aceitar cobranças de horas extras nunca validadas.</span>
+                        <li class="flex items-start bg-slate-50 p-3 rounded-lg border border-slate-100">
+                            <span class="text-red-500 mr-3 mt-1 font-bold">✕</span>
+                            <span class="text-sm md:text-base">Pagar <strong class="text-red-600">cachês em duplicidade</strong> ou aceitar cobranças de horas extras nunca validadas.</span>
                         </li>
-                        <li class="flex items-start">
-                            <span class="text-red-500 mr-2">✕</span>
-                            <span>Financeiro gasta **10 dias úteis** apenas para "fechar o mês".</span>
+                        <li class="flex items-start bg-slate-50 p-3 rounded-lg border border-slate-100">
+                            <span class="text-red-500 mr-3 mt-1 font-bold">✕</span>
+                            <span class="text-sm md:text-base">Financeiro gasta <strong class="text-slate-800">10 dias úteis</strong> apenas para "fechar o mês".</span>
                         </li>
                     </ul>
                 </div>
-                <div class="md:w-1/2 bg-red-50 p-8 rounded-2xl border border-red-100">
-                    <p class="text-red-800 font-semibold text-lg italic">
-                        "Cada erro de cálculo no repasse ao staff ou fornecedor não é apenas um detalhe operacional — é **dinheiro saindo direto do seu lucro líquido**."
+                <div class="md:w-1/2 bg-red-50 p-6 md:p-10 rounded-3xl border border-red-100 shadow-sm">
+                    <p class="text-red-800 font-semibold text-base md:text-lg italic leading-relaxed">
+                        "Cada erro de cálculo no repasse ao staff ou fornecedor não é apenas um detalhe operacional — é <strong class="text-red-700">dinheiro saindo direto do seu lucro líquido</strong>."
                     </p>
-                    <hr class="my-4 border-red-200">
-                    <p class="text-slate-800 font-bold">
+                    <hr class="my-6 border-red-200">
+                    <p class="text-slate-900 font-bold text-sm md:text-base">
                         Se você não tem controle absoluto do seu Custo Total de Propriedade (TCO), você não tem uma empresa, tem uma aposta.
                     </p>
                 </div>
@@ -87,106 +99,211 @@
         </div>
     </section>
 
-    <!-- 3. TERCEIRA DOBRA: Funcionalidades -->
-    <section class="py-20 px-4 bg-slate-900 text-white">
-        <div class="max-w-6xl mx-auto text-center mb-16">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">Transforme seu operacional em uma central de inteligência financeira.</h2>
-            <p class="text-slate-400">O Planner System foi desenhado para ser o <strong class="text-white">"CFO Digital"</strong> da sua produtora:</p>
+    <!-- 3. TERCEIRA DOBRA: Funcionalidades (Clara) -->
+    <section class="py-16 md:py-24 px-4 bg-slate-50 border-y border-slate-100">
+        <div class="max-w-6xl mx-auto text-center mb-12 md:mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-900">Transforme seu operacional em uma central de inteligência financeira.</h2>
+            <p class="text-slate-600 text-lg">O Planner System foi desenhado para ser o <strong class="text-slate-900">"CFO Digital"</strong> da sua produtora:</p>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
             <!-- Func 1 -->
-            <div class="glass-card p-8 rounded-xl">
-                <div class="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-6">
-                    <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+            <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-200 transition hover:shadow-md">
+                <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mb-6 border border-blue-100">
+                    <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
                 </div>
-                <h3 class="text-xl font-bold mb-4">Estimativa vs. Realidade</h3>
-                <p class="text-slate-400">Projete todos os custos antes de assinar o contrato. Acompanhe o **desvio orçamentário em tempo real** e evite surpresas no fechamento.</p>
+                <h3 class="text-xl font-bold mb-3 text-slate-900">Estimativa vs. Realidade</h3>
+                <p class="text-slate-600 text-sm md:text-base">Projete todos os custos antes de assinar o contrato. Acompanhe o <strong class="text-slate-800">desvio orçamentário em tempo real</strong> e evite surpresas no fechamento.</p>
             </div>
             <!-- Func 2 -->
-            <div class="glass-card p-8 rounded-xl">
-                <div class="w-12 h-12 bg-emerald-500/20 rounded-lg flex items-center justify-center mb-6">
-                    <svg class="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+            <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-200 transition hover:shadow-md">
+                <div class="w-12 h-12 bg-emerald-50 rounded-lg flex items-center justify-center mb-6 border border-emerald-100">
+                    <svg class="w-6 h-6 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
                 </div>
-                <h3 class="text-xl font-bold mb-4">Folha de Pagamento Blindada</h3>
-                <p class="text-slate-400">Fim das discussões sobre cachês. O cálculo de horas extras é travado por regras de negócio, eliminando **pagamentos indevidos**.</p>
+                <h3 class="text-xl font-bold mb-3 text-slate-900">Folha de Pagamento Blindada</h3>
+                <p class="text-slate-600 text-sm md:text-base">Fim das discussões sobre cachês. O cálculo de horas extras é travado por regras de negócio, eliminando <strong class="text-slate-800">pagamentos indevidos</strong>.</p>
             </div>
             <!-- Func 3 -->
-            <div class="glass-card p-8 rounded-xl">
-                <div class="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-6">
-                    <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+            <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-200 transition hover:shadow-md">
+                <div class="w-12 h-12 bg-purple-50 rounded-lg flex items-center justify-center mb-6 border border-purple-100">
+                    <svg class="w-6 h-6 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
                 </div>
-                <h3 class="text-xl font-bold mb-4">Dashboard de Lucratividade</h3>
-                <p class="text-slate-400">Tenha a Saúde Financeira de cada projeto na palma da mão. Visualize sua margem de contribuição e o **ROI instantaneamente**.</p>
+                <h3 class="text-xl font-bold mb-3 text-slate-900">Dashboard de Lucratividade</h3>
+                <p class="text-slate-600 text-sm md:text-base">Tenha a Saúde Financeira de cada projeto na palma da mão. Visualize sua margem de contribuição e o <strong class="text-slate-800">ROI instantaneamente</strong>.</p>
             </div>
         </div>
     </section>
 
     <!-- 4. QUARTA DOBRA: Prova do Lucro -->
-    <section class="py-20 px-4 bg-emerald-50">
+    <section class="py-16 md:py-24 px-4 bg-emerald-50">
         <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-3xl md:text-5xl font-extrabold mb-8 text-slate-900">O software que se paga no primeiro evento.</h2>
-            <div class="bg-white p-10 rounded-3xl shadow-xl border border-emerald-100 mb-10">
-                <span class="text-6xl font-black text-emerald-600 mb-4 block">40%</span>
-                <p class="text-2xl font-bold text-slate-800 mb-4 uppercase tracking-tighter">De Redução de Custos Operacionais</p>
-                <p class="text-lg text-slate-600">
-                    Eliminamos o retrabalho do financeiro e os erros de repasse. Em um evento com 100 freelancers, economizar apenas R$ 50,00 por pessoa (erros de hora extra) recupera **R$ 5.000,00 diretamente para o seu caixa.**
+            <h2 class="text-3xl md:text-5xl font-extrabold mb-8 text-slate-900 leading-tight">O software que se paga no primeiro evento.</h2>
+            <div class="bg-white p-8 md:p-12 rounded-3xl shadow-lg border border-emerald-100 mb-8 mx-2">
+                <span class="text-5xl md:text-6xl font-black text-emerald-600 mb-4 block">40%</span>
+                <p class="text-xl md:text-2xl font-bold text-slate-800 mb-6 uppercase tracking-tight">De Redução de Custos Operacionais</p>
+                <p class="text-base md:text-lg text-slate-600 leading-relaxed">
+                    Eliminamos o retrabalho do financeiro e os erros de repasse. Em um evento com 100 freelancers, economizar apenas R$ 50,00 por pessoa (evitando erros de hora extra) recupera <strong class="text-emerald-700 bg-emerald-50 px-2 py-1 rounded">R$ 5.000,00 diretamente para o seu caixa.</strong>
                 </p>
             </div>
-            <p class="text-xl font-semibold text-slate-700">
-                O Planner System não é um gasto; é um <span class="text-emerald-600">investimento de alta liquidez</span> que protege o seu patrimônio.
+            <p class="text-lg md:text-xl font-semibold text-slate-700 px-4">
+                O Planner System não é um gasto; é um <span class="text-emerald-600 font-bold border-b-2 border-emerald-200">investimento de alta liquidez</span> que protege o seu patrimônio.
             </p>
         </div>
     </section>
-
+    
     <!-- 5. QUINTA DOBRA: Objeções -->
-    <section class="py-20 px-4 bg-white">
+    <section class="py-16 md:py-24 px-4 bg-white">
         <div class="max-w-3xl mx-auto">
-            <h2 class="text-3xl font-bold mb-12 text-center text-slate-900">Respostas Diretas para Decisores:</h2>
+            <h2 class="text-3xl md:text-4xl font-bold mb-10 md:mb-16 text-center text-slate-900">Respostas Diretas para Decisores:</h2>
             
-            <div class="space-y-8">
-                <div>
-                    <h3 class="text-lg font-bold text-slate-900 mb-2">"Como isso integra com meu processo atual?"</h3>
-                    <p class="text-slate-600">O Planner System é modular. Ele entra na etapa de execução e fechamento, exportando dados prontos para o seu ERP ou contabilidade, eliminando a digitação manual.</p>
+            <div class="space-y-6 md:space-y-8 px-2">
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                    <h3 class="text-lg md:text-xl font-bold text-slate-900 mb-3 flex items-center">
+                        <span class="text-blue-500 mr-2">👉</span> "Como isso integra com meu processo atual?"
+                    </h3>
+                    <p class="text-slate-600 text-sm md:text-base ml-7">O Planner System é modular. Ele entra na etapa de execução e fechamento, exportando dados prontos para o seu ERP ou contabilidade, eliminando a digitação manual.</p>
                 </div>
-                <hr>
-                <div>
-                    <h3 class="text-lg font-bold text-slate-900 mb-2">"É seguro colocar meus dados financeiros na nuvem?"</h3>
-                    <p class="text-slate-600">Utilizamos criptografia de nível bancário e servidores AWS de alta disponibilidade. Seus dados de custos e margens são restritos por níveis de acesso hierárquicos.</p>
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                    <h3 class="text-lg md:text-xl font-bold text-slate-900 mb-3 flex items-center">
+                        <span class="text-blue-500 mr-2">👉</span> "É seguro colocar meus dados financeiros na nuvem?"
+                    </h3>
+                    <p class="text-slate-600 text-sm md:text-base ml-7">Utilizamos criptografia de nível bancário e servidores AWS de alta disponibilidade. Seus dados de custos e margens são restritos por níveis de acesso hierárquicos.</p>
                 </div>
-                <hr>
-                <div>
-                    <h3 class="text-lg font-bold text-slate-900 mb-2">"A equipe operacional vai conseguir lançar os custos corretamente?"</h3>
-                    <p class="text-slate-600">Sim. A interface é intuitiva e focada no campo. O operacional alimenta o sistema com dados de presença, e o financeiro apenas audita e aprova. O controle volta para a sua mão.</p>
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                    <h3 class="text-lg md:text-xl font-bold text-slate-900 mb-3 flex items-center">
+                        <span class="text-blue-500 mr-2">👉</span> "A equipe operacional vai conseguir lançar os custos corretamente?"
+                    </h3>
+                    <p class="text-slate-600 text-sm md:text-base ml-7">Sim. A interface é intuitiva e focada no campo. O operacional alimenta o sistema com dados de presença, e o financeiro apenas audita e aprova. O controle volta para a sua mão.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 6. SEXTA DOBRA: Ultimato B2B -->
-    <section id="demo" class="py-24 px-4 bg-gradient-navy text-white text-center">
+    <!-- NOVA SEÇÃO: Prova de Resultados (Imagem) -->
+    <section class="py-16 md:py-24 px-4 bg-slate-100 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-10 md:mb-16 px-2">
+                <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight leading-tight">
+                    Eu desafio qualquer outro sistema ter tantas
+                    <span class="text-emerald-500 block md:inline mt-2 md:mt-0">provas de resultados práticos</span>
+                </h2>
+                <p class="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto">
+                    Veja o que a equipe financeira e os produtores estão falando sobre o dia a dia operando com o Planner System.
+                </p>
+            </div>
+
+            <!-- Imagem Única de Depoimentos (Aparece apenas no Desktop) -->
+            <div class="hidden md:flex justify-center px-4 md:px-0">
+                <img src="https://raw.githubusercontent.com/plannersystempp/landing-page/refs/heads/main/assets/img/depoimento_financeiro.png" 
+                     alt="Mosaico de depoimentos e provas de resultados do Planner System" 
+                     class="w-full max-w-5xl rounded-xl">
+            </div>
+
+            <!-- Imagens de Depoimentos Empilhadas (Aparece apenas no Mobile) -->
+            <div class="flex md:hidden flex-col gap-6 items-center w-full">
+                <img src="https://raw.githubusercontent.com/plannersystempp/landing-page/refs/heads/main/assets/img/depoimentofinanceiro-01.png" alt="Depoimento Planner System 1" class="w-full max-w-md rounded-xl shadow-sm border border-slate-200">
+                <img src="https://raw.githubusercontent.com/plannersystempp/landing-page/refs/heads/main/assets/img/depoimentofinanceiro-02.png" alt="Depoimento Planner System 2" class="w-full max-w-md rounded-xl shadow-sm border border-slate-200">
+                <img src="https://raw.githubusercontent.com/plannersystempp/landing-page/refs/heads/main/assets/img/depoimentofinanceiro-03.png" alt="Depoimento Planner System 3" class="w-full max-w-md rounded-xl shadow-sm border border-slate-200">
+                <img src="https://raw.githubusercontent.com/plannersystempp/landing-page/refs/heads/main/assets/img/depoimentofinanceiro-04.png" alt="Depoimento Planner System 4" class="w-full max-w-md rounded-xl shadow-sm border border-slate-200">
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. SEXTA DOBRA: Ultimato B2B COM TEMPORIZADOR E OFERTA -->
+    <section id="demo" class="py-16 md:py-24 px-4 bg-white text-center">
         <div class="max-w-4xl mx-auto">
-            <h2 class="text-4xl md:text-5xl font-black mb-6">Pare de operar no escuro. Comece a lucrar com precisão.</h2>
-            <p class="text-xl text-slate-300 mb-12">
-                Continuar dependendo de planilhas frágeis é aceitar que sua margem de lucro seja decidida pelo acaso. Enquanto seus concorrentes automatizam, você não pode ficar preso a fechamentos lentos.
+            <h2 class="text-3xl md:text-5xl font-black mb-6 text-slate-900 leading-tight">Pare de operar no escuro.<br> Comece a lucrar com precisão.</h2>
+            <p class="text-lg md:text-xl text-slate-600 mb-10 px-2">
+                Continuar dependendo de planilhas frágeis é aceitar que sua margem de lucro seja decidida pelo acaso.
             </p>
-            <div class="bg-white/10 p-8 md:p-12 rounded-3xl backdrop-blur-md border border-white/20">
-                <p class="text-2xl font-bold mb-8">Assuma o controle total do seu fluxo de caixa hoje.</p>
-                <button onclick="alert('Iniciando agendamento de demonstração...')" class="bg-emerald-500 hover:bg-emerald-600 text-white font-black py-6 px-12 rounded-full text-2xl transition transform hover:scale-105 shadow-2xl w-full md:w-auto">
-                    👉 SOLICITAR DEMONSTRAÇÃO E ANÁLISE DE PROCESSO
-                </button>
-                <p class="mt-6 text-slate-400 text-sm">
-                    Fale com um consultor especialista em gestão de eventos e proteja seu próximo projeto.
+            
+            <!-- Box de Oferta -->
+            <div class="bg-slate-50 p-6 md:p-12 rounded-3xl border border-slate-200 shadow-xl relative mt-12 mx-2">
+                <!-- Tag Superior -->
+                <div class="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-red-500 text-white font-bold py-2 px-6 rounded-full shadow-lg text-sm md:text-base whitespace-nowrap">
+                    🔥 OFERTA POR TEMPO LIMITADO
+                </div>
+
+                <div class="mt-6 mb-8 text-center">
+                    <h3 class="text-2xl md:text-3xl font-extrabold text-slate-900 mb-4">🎁 Bônus: Imigração de Planilhas + 30 Dias Grátis</h3>
+                    <p class="text-slate-600 md:text-lg mb-2">Use agora por 30 dias sem custo nenhum. Nós cuidamos da migração dos seus dados.</p>
+                    <p class="font-bold text-emerald-600 bg-emerald-50 inline-block px-3 py-1 rounded-md mt-2 border border-emerald-100">
+                        ✅ Sem precisar de cartão de crédito!
+                    </p>
+                </div>
+
+                <!-- Temporizador -->
+                <div class="flex justify-center items-center gap-3 md:gap-5 mb-10">
+                    <div class="bg-slate-900 text-white rounded-xl p-3 md:p-4 w-20 md:w-24 shadow-inner">
+                        <span id="minutos" class="text-3xl md:text-4xl font-black block">14</span>
+                        <span class="text-[10px] md:text-xs uppercase tracking-wider text-slate-400 font-semibold">Minutos</span>
+                    </div>
+                    <div class="text-3xl md:text-4xl font-black text-slate-300 pb-5">:</div>
+                    <div class="bg-slate-900 text-white rounded-xl p-3 md:p-4 w-20 md:w-24 shadow-inner">
+                        <span id="segundos" class="text-3xl md:text-4xl font-black block">59</span>
+                        <span class="text-[10px] md:text-xs uppercase tracking-wider text-slate-400 font-semibold">Segundos</span>
+                    </div>
+                </div>
+
+                <a href="https://wa.me/5521965865470?text=Ol%C3%A1!%20Gostaria%20de%20resgatar%20meu%20acesso%20com%20o%20b%C3%B4nus%20de%20migra%C3%A7%C3%A3o%20e%2030%20dias%20gr%C3%A1tis." target="_blank" class="block bg-emerald-500 hover:bg-emerald-600 text-white font-black py-5 px-6 md:px-12 rounded-full text-lg md:text-2xl transition transform hover:scale-105 shadow-xl w-full">
+                    👉 RESGATAR MEU ACESSO E BÔNUS
+                </a>
+                <p class="mt-6 text-red-500 font-bold text-sm md:text-base animate-pulse">
+                    ⏳ Corra! Restam poucas vagas com este bônus de migração.
                 </p>
             </div>
         </div>
     </section>
 
-    <footer class="py-12 bg-slate-950 text-slate-500 text-center text-sm border-t border-slate-900">
-        <div class="max-w-6xl mx-auto">
-            <p>&copy; 2024 Planner System. Todos os direitos reservados. Foco em Lucro e Eficiência Operacional.</p>
+    <!-- Footer Claro -->
+    <footer class="py-10 bg-slate-50 border-t border-slate-200 text-center">
+        <div class="max-w-6xl mx-auto px-4">
+            <img src="https://raw.githubusercontent.com/plannersystempp/landing-page/refs/heads/main/assets/img/plannersystem_logo_preto.png" alt="Logo Planner System" class="h-5 mx-auto mb-6 opacity-60 grayscale hover:grayscale-0 transition duration-300">
+            <p class="text-slate-500 text-sm md:text-base">&copy; 2024 Planner System. Todos os direitos reservados. Foco em Lucro e Eficiência Operacional.</p>
         </div>
     </footer>
 
+    <!-- BOTÃO FLUTUANTE DE WHATSAPP (Otimizado para Mobile) -->
+    <div class="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50 flex flex-col items-end gap-2 pointer-events-none">
+        <!-- Balão de mensagem (compacto no mobile, maior no desktop) -->
+        <div class="bg-white text-slate-800 text-[11px] md:text-sm font-bold px-3 py-2 md:px-4 md:py-2.5 rounded-xl md:rounded-2xl shadow-lg border border-slate-100 animate-float pointer-events-auto relative mr-2 md:mr-4">
+            👋 Tem dúvidas? Fale com a gente!
+            <!-- Triângulo do balão -->
+            <div class="absolute -bottom-1.5 right-6 w-3 h-3 bg-white border-b border-r border-slate-100 transform rotate-45"></div>
+        </div>
+        
+        <!-- Botão WhatsApp -->
+        <a href="https://wa.me/5521965865470" target="_blank" class="bg-[#25D366] hover:bg-[#128C7E] text-white p-3.5 md:p-4 rounded-full flex items-center justify-center shadow-2xl transition transform hover:scale-110 pointer-events-auto group">
+            <svg class="w-7 h-7 md:w-8 md:h-8" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+            </svg>
+        </a>
+    </div>
+
+    <!-- Script do Temporizador -->
+    <script>
+        // Define tempo inicial: 14 minutos e 59 segundos
+        let tempoTotalEmSegundos = (14 * 60) + 59; 
+        
+        const elMinutos = document.getElementById('minutos');
+        const elSegundos = document.getElementById('segundos');
+
+        const atualizarCronometro = setInterval(() => {
+            if (tempoTotalEmSegundos <= 0) {
+                clearInterval(atualizarCronometro);
+                return; // Você pode resetar ou mudar a mensagem aqui quando zerar
+            }
+
+            tempoTotalEmSegundos--;
+
+            let minutos = Math.floor(tempoTotalEmSegundos / 60);
+            let segundos = tempoTotalEmSegundos % 60;
+
+            // Formata com zero à esquerda se for menor que 10
+            elMinutos.innerText = minutos < 10 ? '0' + minutos : minutos;
+            elSegundos.innerText = segundos < 10 ? '0' + segundos : segundos;
+
+        }, 1000);
+    </script>
 </body>
 </html>
